@@ -10,7 +10,7 @@ using C_Sharp_ExamplesCode;
 namespace C_Sharp_ExamplesCode
 {
     [TestClass]
-    public class ExamplesTest
+    public class UnitTest
     {
         List<Person> listPersons;
         List<Address> listAddresses;

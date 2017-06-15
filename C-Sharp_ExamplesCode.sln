@@ -1,23 +1,59 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C-Sharp_ExamplesCode", "C-Sharp_ExamplesCode\C-Sharp_ExamplesCode.csproj", "{57A811D7-1F2D-4FED-8959-905ADDE28FA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary", "TestLibrary\TestLibrary.csproj", "{2C32C705-E2D5-46EA-9797-604F29DEE28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "TestLibrary\UnitTest.csproj", "{2C32C705-E2D5-46EA-9797-604F29DEE28E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{29FE4D99-7865-41B1-A86F-5C7DA97C1923}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{F58AF458-072D-4279-A1F1-F0779B0FB57F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLLClasses", "BLLClasses\BLLClasses.csproj", "{3FFF8AD6-FC11-4AEF-9A12-C636DFEFC276}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{769E63F4-2B16-4C9E-AAD5-FCEFE49DE7A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteExample", "WebSiteExample\WebSiteExample.csproj", "{EA8287A0-932A-4C04-B7EB-36FAA490ED82}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJSTutorial(1)", "Web\AngularJSTutorial\", "{98B7CB3C-F03A-4121-A343-61C7B84EFEA8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62466"
+		Debug.AspNetCompiler.PhysicalPath = "Web\AngularJSTutorial\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62466\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62466"
+		Release.AspNetCompiler.PhysicalPath = "Web\AngularJSTutorial\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62466\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62466"
+		SlnRelativePath = "Web\AngularJSTutorial\"
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSTutorial", "AngularJSTutorial\AngularJSTutorial.csproj", "{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSiteExample(1)", "Web\WebSiteExample\", "{8AFF8F75-519D-432D-9048-81D0286E3416}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62490"
+		Debug.AspNetCompiler.PhysicalPath = "Web\WebSiteExample\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62490\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62490"
+		Release.AspNetCompiler.PhysicalPath = "Web\WebSiteExample\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62490\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62490"
+		SlnRelativePath = "Web\WebSiteExample\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,24 +77,20 @@ Global
 		{F58AF458-072D-4279-A1F1-F0779B0FB57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58AF458-072D-4279-A1F1-F0779B0FB57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F58AF458-072D-4279-A1F1-F0779B0FB57F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3FFF8AD6-FC11-4AEF-9A12-C636DFEFC276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3FFF8AD6-FC11-4AEF-9A12-C636DFEFC276}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3FFF8AD6-FC11-4AEF-9A12-C636DFEFC276}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3FFF8AD6-FC11-4AEF-9A12-C636DFEFC276}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA8287A0-932A-4C04-B7EB-36FAA490ED82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA8287A0-932A-4C04-B7EB-36FAA490ED82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA8287A0-932A-4C04-B7EB-36FAA490ED82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA8287A0-932A-4C04-B7EB-36FAA490ED82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B7CB3C-F03A-4121-A343-61C7B84EFEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B7CB3C-F03A-4121-A343-61C7B84EFEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B7CB3C-F03A-4121-A343-61C7B84EFEA8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B7CB3C-F03A-4121-A343-61C7B84EFEA8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8AFF8F75-519D-432D-9048-81D0286E3416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFF8F75-519D-432D-9048-81D0286E3416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFF8F75-519D-432D-9048-81D0286E3416}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFF8F75-519D-432D-9048-81D0286E3416}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EA8287A0-932A-4C04-B7EB-36FAA490ED82} = {769E63F4-2B16-4C9E-AAD5-FCEFE49DE7A4}
-		{D628FFA0-8BE7-4E0F-8C29-91BF965A8FB3} = {769E63F4-2B16-4C9E-AAD5-FCEFE49DE7A4}
+		{98B7CB3C-F03A-4121-A343-61C7B84EFEA8} = {769E63F4-2B16-4C9E-AAD5-FCEFE49DE7A4}
+		{8AFF8F75-519D-432D-9048-81D0286E3416} = {769E63F4-2B16-4C9E-AAD5-FCEFE49DE7A4}
 	EndGlobalSection
 EndGlobal

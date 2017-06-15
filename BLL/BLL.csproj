@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="BLL.cs" />
     <Compile Include="BLLCareers.cs" />
-    <Compile Include="Cars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

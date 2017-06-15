@@ -59,6 +59,27 @@ namespace C_Sharp_ExamplesCode
         }
     }
 
+    public interface IPerson
+    {
+        void Train();
+    }
+
+    public class Peter : IPerson
+    {
+        public void Train()
+        {
+            Console.WriteLine("Peter's training");
+        }
+    }
+
+    public class Sabina : IPerson
+    {
+        public void Train()
+        {
+            Console.WriteLine("Sabina's training");
+        }
+    }
+
     public class HelperAddressAndPerson
     {
         /// <summary>
@@ -170,7 +191,7 @@ namespace C_Sharp_ExamplesCode
             }
 
             // ---------------------
-            // DEPENDANCY INJECTION:
+            // DEPENDENCY INJECTION:
             // ---------------------
             var persons = new List<IPerson>()
             {
@@ -186,10 +207,10 @@ namespace C_Sharp_ExamplesCode
             // --------
             // LIBRARY:
             // --------
-            foreach (string record in Cars.Names)
-            {
-                Console.WriteLine(record);
-            }
+            //foreach (string record in Cars.Names)
+            //{
+            //    Console.WriteLine(record);
+            //}
 
             // -----------
             // EF from BLL

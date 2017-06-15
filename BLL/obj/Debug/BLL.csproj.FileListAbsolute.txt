@@ -17,6 +17,7 @@ C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\DAL.dll
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\EntityFramework.dll
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\EntityFramework.SqlServer.dll
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\DAL.pdb
+C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\DAL.dll.config
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\EntityFramework.xml
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\bin\Debug\EntityFramework.SqlServer.xml
 C:\VS_Test\_ASP.NET-MVC_Examples\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
