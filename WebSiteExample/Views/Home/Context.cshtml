@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Context";
+}
+@model System.Collections.Specialized.NameValueCollection
+
+<h2>Data from Context</h2>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+</thead>
+<tbody>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m</td>
+        </tr>
+    }
+</tbody>
+</table>
+
+
+

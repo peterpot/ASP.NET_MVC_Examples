@@ -1,0 +1,1307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Salaries_PRODModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AGE">
+    <Key>
+      <PropertyRef Name="AgeId" />
+    </Key>
+    <Property Name="AgeId" Type="Int16" Nullable="false" />
+    <Property Name="AgeFrom" Type="Int16" Nullable="false" />
+    <Property Name="AgeTo" Type="Int16" Nullable="false" />
+    <Property Name="AgeName" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ARTICLE">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArticleName" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ArticlePageTitle" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ArticlePageMetaDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ArticlePageMetaKeywords" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleWrittenBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ArticleAutoContent" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ArticlePriority" Type="Int32" />
+    <Property Name="ArticleViews" Type="Int32" />
+    <Property Name="ArticleCountryStateCity" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IDcountry" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CAREERGROUP">
+    <Key>
+      <PropertyRef Name="CareerGroupID" />
+    </Key>
+    <Property Name="CareerGroupID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerGroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerGroupDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CareerGroupURL" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CareerGroupImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContentID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CareerGroupNameForURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CAREER">
+    <Key>
+      <PropertyRef Name="CareerID" />
+    </Key>
+    <Property Name="CareerID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerGroupID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CareerURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ContentID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CareerNameForURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CITy">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AverageSalaryUSD" Type="Int32" />
+    <Property Name="StateID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CityURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CityImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContentID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CityNameForURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="COMMENT">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommentForURL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CommentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CommentDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AuthorName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AuthorIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="COUNTRy">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Currency" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryAverageSalary" Type="Int64" />
+    <Property Name="CountryAverageSalaryUSD" Type="Int32" />
+    <Property Name="CurrencyRatioToUSD" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="CountryScale" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ConvertToUSD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsEU" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CountryURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CountryImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContentID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CountryNameForURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CURRENCy">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyRatioToUSD" Type="Double" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CURRENCIESUSD">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+      <PropertyRef Name="CurrencyYear" />
+    </Key>
+    <Property Name="CurrencyID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyYear" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CurrencyRatioToUSD" Type="Double" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyRatioToEUR" Type="Double" />
+  </EntityType>
+  <EntityType Name="GENDER">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GenderName" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KINDOFWORK">
+    <Key>
+      <PropertyRef Name="KindOfWorkID" />
+    </Key>
+    <Property Name="KindOfWorkID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="KindOfWorkName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PAYMENT">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LatestPayment" Type="DateTime" Precision="3" />
+    <Property Name="KindOfPayment" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="VisitorIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RANGEGROUP">
+    <Key>
+      <PropertyRef Name="RangeGroupID" />
+    </Key>
+    <Property Name="RangeGroupID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RangeGroupName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESTRICTED">
+    <Key>
+      <PropertyRef Name="RestrictedIP" />
+    </Key>
+    <Property Name="RestrictedIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESTRICTEDBROWSER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="BrowserVersion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BrowserSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SALARy">
+    <Key>
+      <PropertyRef Name="SalaryID" />
+    </Key>
+    <Property Name="SalaryID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerGroup" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Career" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GrossSalary" Type="Int64" Nullable="false" />
+    <Property Name="NetSalary" Type="Int64" Nullable="false" />
+    <Property Name="Experiences" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Education" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PermanentContract" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VisitorIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="VisitorCountry" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Age" Type="Int16" />
+    <Property Name="YearsAtCurrentEmployeer" Type="Int16" />
+    <Property Name="NumberOfAllCompanies" Type="Int16" />
+    <Property Name="HoursOfEducation" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WorkSatisfaction" Type="Int16" />
+    <Property Name="CompanySatisfaction" Type="Int16" />
+    <Property Name="SalarySatisfaction" Type="Int16" />
+    <Property Name="WorkHoursPerWeek" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SportsPerWeek" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SleepPerDay" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CareerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProceedID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SalaryLevel" Type="Int32" />
+    <Property Name="SalaryLevelEUR" Type="Int32" />
+    <Property Name="SalaryLevelUSD" Type="Int32" />
+    <Property Name="IsSalaryChecked" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AgeID" Type="Int32" />
+    <Property Name="IsBrowser" Type="Boolean" />
+    <Property Name="IsMobile" Type="Boolean" />
+    <Property Name="BrowserVersion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BrowserSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="URL">
+    <Key>
+      <PropertyRef Name="URLID" />
+    </Key>
+    <Property Name="URLID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceType" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXPERIENCE">
+    <Key>
+      <PropertyRef Name="ExperienceID" />
+      <PropertyRef Name="ExperienceName" />
+    </Key>
+    <Property Name="ExperienceID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExperienceName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExperienceImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceNameForURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FEEDBACK">
+    <Key>
+      <PropertyRef Name="FeedbackID" />
+      <PropertyRef Name="Comment" />
+      <PropertyRef Name="FeedbackDate" />
+    </Key>
+    <Property Name="FeedbackID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FeedbackDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VisitorIP" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="INTERNALLINK">
+    <Key>
+      <PropertyRef Name="LinkOrder" />
+    </Key>
+    <Property Name="LinkOrder" Type="Int16" Nullable="false" />
+    <Property Name="LinkFromType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LinkToType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LinkFromID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LinkToID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PROCEED">
+    <Key>
+      <PropertyRef Name="ProceedID" />
+    </Key>
+    <Property Name="ProceedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ProceedFromPage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SalaryAddedAttempts" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SalaryAdded" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ProceedErrors" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProceedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RANx">
+    <Key>
+      <PropertyRef Name="RangeGroupID" />
+      <PropertyRef Name="RangeID" />
+      <PropertyRef Name="RangeFrom" />
+      <PropertyRef Name="RangeTo" />
+      <PropertyRef Name="RangeAverage" />
+    </Key>
+    <Property Name="RangeGroupID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RangeID" Type="Int16" Nullable="false" />
+    <Property Name="RangeFrom" Type="Int32" Nullable="false" />
+    <Property Name="RangeTo" Type="Int32" Nullable="false" />
+    <Property Name="RangeAverage" Type="Int32" Nullable="false" />
+    <Property Name="Percentage" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SALARYANSWER">
+    <Key>
+      <PropertyRef Name="QuestionID" />
+      <PropertyRef Name="AnswerID" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="QuestionID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AnswerID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+    <Property Name="UserID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VisitorIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IsBrowser" Type="Boolean" />
+    <Property Name="IsMobile" Type="Boolean" />
+    <Property Name="BrowserVersion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BrowserSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SALARYLEVEL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RangeID" Type="Int16" />
+    <Property Name="RangeFrom" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RangeTo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="RangeText" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CurrencyID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="Scale" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SALARYQUESTION">
+    <Key>
+      <PropertyRef Name="QuestionID" />
+      <PropertyRef Name="Question" />
+      <PropertyRef Name="DateStarted" />
+      <PropertyRef Name="UserStarted" />
+    </Key>
+    <Property Name="QuestionID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QuestionSubject" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserStarted" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateLastAnswer" Type="DateTime" Precision="3" />
+    <Property Name="AnswersCount" Type="Int16" />
+    <Property Name="ViewsCount" Type="Int32" />
+    <Property Name="UserLastPost" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="VisitorIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IsBrowser" Type="Boolean" />
+    <Property Name="IsMobile" Type="Boolean" />
+    <Property Name="BrowserVersion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BrowserSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="STATE">
+    <Key>
+      <PropertyRef Name="StateID" />
+      <PropertyRef Name="CountryID" />
+      <PropertyRef Name="StateName" />
+    </Key>
+    <Property Name="StateID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AverageSalaryUSD" Type="Int32" />
+    <Property Name="StateURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StateImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContentID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="StateNameForURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VISITOR">
+    <Key>
+      <PropertyRef Name="VisitorsCount" />
+    </Key>
+    <Property Name="VisitorsCount" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="viewSalary">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateUpdated" />
+      <PropertyRef Name="GrossSalary" />
+      <PropertyRef Name="PermanentContract" />
+      <PropertyRef Name="Education" />
+      <PropertyRef Name="Experiences" />
+      <PropertyRef Name="CareerGroupID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GrossSalary" Type="Int64" Nullable="false" />
+    <Property Name="GrossSalaryUSD" Type="Double" />
+    <Property Name="PermanentContract" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsSalaryChecked" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Age" Type="Int16" />
+    <Property Name="AgeID" Type="Int32" />
+    <Property Name="Education" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Experiences" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SalaryLevel" Type="Int32" />
+    <Property Name="SalaryLevelEUR" Type="Int32" />
+    <Property Name="SalaryLevelUSD" Type="Int32" />
+    <Property Name="CareerGroupID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CareerID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CareerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EducationID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EducationName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsEU" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CurrencyID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CityID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="viewSalaries_ALL">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="SalaryID" />
+      <PropertyRef Name="DateUpdated" />
+      <PropertyRef Name="GrossSalary" />
+      <PropertyRef Name="NetSalary" />
+      <PropertyRef Name="GrossSalaryUSD" />
+      <PropertyRef Name="NetSalaryUSD" />
+      <PropertyRef Name="SalaryEntries" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SalaryID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateUpdated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GrossSalary" Type="Int64" Nullable="false" />
+    <Property Name="NetSalary" Type="Int64" Nullable="false" />
+    <Property Name="GrossSalaryUSD" Type="Double" Nullable="false" />
+    <Property Name="NetSalaryUSD" Type="Double" Nullable="false" />
+    <Property Name="SalaryEntries" Type="Int32" Nullable="false" />
+    <Property Name="CareerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="YearsAtCurrentEmployeer" Type="Int16" />
+    <Property Name="NumberOfAllCompanies" Type="Int16" />
+    <Property Name="HoursOfEducation" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WorkSatisfaction" Type="Int16" />
+    <Property Name="CompanySatisfaction" Type="Int16" />
+    <Property Name="SalarySatisfaction" Type="Int16" />
+    <Property Name="CurrencyID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CurrencyRatioToUSD" Type="Double" />
+    <Property Name="EducationID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EducationName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ExperienceName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CityID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsEu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ConvertToUSD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CountryAverageSalaryUSD" Type="Int32" />
+    <Property Name="StateID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CareerGroupID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CareerGroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CareerID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CareerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GenderID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="GenderName" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="KindOfWorkID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="KindOfWorkName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Salaries_PRODEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AGES" EntityType="Self.AGE" />
+    <EntitySet Name="ARTICLES" EntityType="Self.ARTICLE" />
+    <EntitySet Name="CAREERGROUPS" EntityType="Self.CAREERGROUP" />
+    <EntitySet Name="CAREERS" EntityType="Self.CAREER" />
+    <EntitySet Name="CITIES" EntityType="Self.CITy" />
+    <EntitySet Name="COMMENTS" EntityType="Self.COMMENT" />
+    <EntitySet Name="COUNTRIES" EntityType="Self.COUNTRy" />
+    <EntitySet Name="CURRENCIES" EntityType="Self.CURRENCy" />
+    <EntitySet Name="CURRENCIESUSDs" EntityType="Self.CURRENCIESUSD" />
+    <EntitySet Name="GENDERs" EntityType="Self.GENDER" />
+    <EntitySet Name="KINDOFWORKs" EntityType="Self.KINDOFWORK" />
+    <EntitySet Name="PAYMENTS" EntityType="Self.PAYMENT" />
+    <EntitySet Name="RANGEGROUPS" EntityType="Self.RANGEGROUP" />
+    <EntitySet Name="RESTRICTEDs" EntityType="Self.RESTRICTED" />
+    <EntitySet Name="RESTRICTEDBROWSERS" EntityType="Self.RESTRICTEDBROWSER" />
+    <EntitySet Name="SALARIES" EntityType="Self.SALARy" />
+    <EntitySet Name="URLS" EntityType="Self.URL" />
+    <EntitySet Name="EXPERIENCES" EntityType="Self.EXPERIENCE" />
+    <EntitySet Name="FEEDBACKS" EntityType="Self.FEEDBACK" />
+    <EntitySet Name="INTERNALLINKS" EntityType="Self.INTERNALLINK" />
+    <EntitySet Name="PROCEEDS" EntityType="Self.PROCEED" />
+    <EntitySet Name="RANGES" EntityType="Self.RANx" />
+    <EntitySet Name="SALARYANSWERS" EntityType="Self.SALARYANSWER" />
+    <EntitySet Name="SALARYLEVELS" EntityType="Self.SALARYLEVEL" />
+    <EntitySet Name="SALARYQUESTIONS" EntityType="Self.SALARYQUESTION" />
+    <EntitySet Name="STATES" EntityType="Self.STATE" />
+    <EntitySet Name="VISITORS" EntityType="Self.VISITOR" />
+    <EntitySet Name="viewSalaries" EntityType="Self.viewSalary" />
+    <EntitySet Name="viewSalaries_ALL" EntityType="Self.viewSalaries_ALL" />
+    <FunctionImport Name="Add_Update_PageContent">
+      <Parameter Name="contentType" Mode="In" Type="String" />
+      <Parameter Name="contentID" Mode="In" Type="String" />
+      <Parameter Name="contentText" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteComment">
+      <Parameter Name="CommentID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Get_Payment_ForEmail" ReturnType="Collection(Salaries_PRODModel.Get_Payment_ForEmail_Result)">
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAge_ByID" ReturnType="Collection(Salaries_PRODModel.GetAge_ByID_Result)">
+      <Parameter Name="ageID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetArticleID_ByLocationID" ReturnType="Collection(String)">
+      <Parameter Name="locationID" Mode="In" Type="String" />
+      <Parameter Name="articleType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCareer_ByID" ReturnType="Collection(Salaries_PRODModel.GetCareer_ByID_Result)">
+      <Parameter Name="careerID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCareerGroup_ByID" ReturnType="Collection(Salaries_PRODModel.GetCareerGroup_ByID_Result)">
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCareerGroups_ALL" ReturnType="Collection(Salaries_PRODModel.GetCareerGroups_ALL_Result)" />
+    <FunctionImport Name="GetCareerGroupsForSelect_ALL" ReturnType="Collection(Salaries_PRODModel.GetCareerGroupsForSelect_ALL_Result)" />
+    <FunctionImport Name="GetCareers_ALL" ReturnType="Collection(Salaries_PRODModel.GetCareers_ALL_Result)" />
+    <FunctionImport Name="GetCareers_ForCareerGroupID" ReturnType="Collection(Salaries_PRODModel.GetCareers_ForCareerGroupID_Result)">
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCities_ALL" ReturnType="Collection(Salaries_PRODModel.GetCities_ALL_Result)" />
+    <FunctionImport Name="GetCities_ByCountryID" ReturnType="Collection(Salaries_PRODModel.GetCities_ByCountryID_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCities_ByStateID" ReturnType="Collection(Salaries_PRODModel.GetCities_ByStateID_Result)">
+      <Parameter Name="stateID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCity_ByID" ReturnType="Collection(Salaries_PRODModel.GetCity_ByID_Result)">
+      <Parameter Name="cityID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetComment_ByID" ReturnType="Collection(Salaries_PRODModel.GetComment_ByID_Result)">
+      <Parameter Name="CommentID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetComments_ByUrlID" ReturnType="Collection(Salaries_PRODModel.GetComments_ByUrlID_Result)">
+      <Parameter Name="CommentForURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCountnries_ALL" ReturnType="Collection(Salaries_PRODModel.GetCountnries_ALL_Result)" />
+    <FunctionImport Name="GetCountnriesForSelect_ALL" ReturnType="Collection(Salaries_PRODModel.GetCountnriesForSelect_ALL_Result)" />
+    <FunctionImport Name="GetCountries_ALL" ReturnType="Collection(Salaries_PRODModel.GetCountries_ALL_Result)" />
+    <FunctionImport Name="GetCountriesForSelect_ALL" ReturnType="Collection(Salaries_PRODModel.GetCountriesForSelect_ALL_Result)" />
+    <FunctionImport Name="GetCountry_ByID" ReturnType="Collection(Salaries_PRODModel.GetCountry_ByID_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCurrencies_ALL" ReturnType="Collection(Salaries_PRODModel.GetCurrencies_ALL_Result)" />
+    <FunctionImport Name="GetCurrency_ByID" ReturnType="Collection(Salaries_PRODModel.GetCurrency_ByID_Result)">
+      <Parameter Name="currencyID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetEducation_ALL" ReturnType="Collection(Salaries_PRODModel.GetEducation_ALL_Result)" />
+    <FunctionImport Name="GetEducation_ByID" ReturnType="Collection(Salaries_PRODModel.GetEducation_ByID_Result)">
+      <Parameter Name="educationID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetExperience_ALL" ReturnType="Collection(Salaries_PRODModel.GetExperience_ALL_Result)" />
+    <FunctionImport Name="GetExperience_ByID" ReturnType="Collection(Salaries_PRODModel.GetExperience_ByID_Result)">
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGender_ByID" ReturnType="Collection(Salaries_PRODModel.GetGender_ByID_Result)">
+      <Parameter Name="genderID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetGroupedSalaries">
+      <Parameter Name="groupBy" Mode="In" Type="String" />
+      <Parameter Name="countryID" Mode="In" Type="String" />
+      <Parameter Name="stateID" Mode="In" Type="String" />
+      <Parameter Name="cityID" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+      <Parameter Name="careerID" Mode="In" Type="String" />
+      <Parameter Name="levelID" Mode="In" Type="String" />
+      <Parameter Name="genderID" Mode="In" Type="String" />
+      <Parameter Name="eduID" Mode="In" Type="String" />
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+      <Parameter Name="ageID" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="kindOfWork" Mode="In" Type="String" />
+      <Parameter Name="startWith" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetInternalLinks_ByFromID" ReturnType="Collection(Salaries_PRODModel.GetInternalLinks_ByFromID_Result)">
+      <Parameter Name="fromID" Mode="In" Type="String" />
+      <Parameter Name="fromView" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetKindOfWork_ByID" ReturnType="Collection(Salaries_PRODModel.GetKindOfWork_ByID_Result)">
+      <Parameter Name="kindofworkID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPageContent_ByID" ReturnType="Collection(Salaries_PRODModel.GetPageContent_ByID_Result)">
+      <Parameter Name="contentID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPageContent_ByParameters" ReturnType="Collection(Salaries_PRODModel.GetPageContent_ByParameters_Result)">
+      <Parameter Name="locationID" Mode="In" Type="String" />
+      <Parameter Name="articleType" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPageContent_ForID" ReturnType="Collection(Salaries_PRODModel.GetPageContent_ForID_Result)">
+      <Parameter Name="pForID" Mode="In" Type="String" />
+      <Parameter Name="pAticleType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProceed_ByID" ReturnType="Collection(Salaries_PRODModel.GetProceed_ByID_Result)">
+      <Parameter Name="ProceedID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetRange_ByUrlID" ReturnType="Collection(Salaries_PRODModel.GetRange_ByUrlID_Result)">
+      <Parameter Name="CountryID" Mode="In" Type="String" />
+      <Parameter Name="UrlID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalariesByCareerAndLocation_Count" ReturnType="Collection(Int32)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+      <Parameter Name="stateID" Mode="In" Type="String" />
+      <Parameter Name="cityID" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+      <Parameter Name="careerID" Mode="In" Type="String" />
+      <Parameter Name="levelID" Mode="In" Type="String" />
+      <Parameter Name="genderID" Mode="In" Type="String" />
+      <Parameter Name="eduID" Mode="In" Type="String" />
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+      <Parameter Name="ageID" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="kindOfWork" Mode="In" Type="String" />
+      <Parameter Name="startWith" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalariesByCareerAndLocation_Count_AllThisMonth" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="GetSalariesByCareerAndLocation_Count_AllThisWeek" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="GetSalariesByCareerAndLocation_ForDetails" ReturnType="Collection(Salaries_PRODModel.GetSalariesByCareerAndLocation_ForDetails_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+      <Parameter Name="stateID" Mode="In" Type="String" />
+      <Parameter Name="cityID" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+      <Parameter Name="careerID" Mode="In" Type="String" />
+      <Parameter Name="kindOfWork" Mode="In" Type="String" />
+      <Parameter Name="levelID" Mode="In" Type="String" />
+      <Parameter Name="genderID" Mode="In" Type="String" />
+      <Parameter Name="eduID" Mode="In" Type="String" />
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+      <Parameter Name="ageID" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="startRowIndex" Mode="In" Type="Int32" />
+      <Parameter Name="maxNumRows" Mode="In" Type="Int32" />
+      <Parameter Name="startWith" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalariesByCareerAndLocation_Paged" ReturnType="Collection(Salaries_PRODModel.GetSalariesByCareerAndLocation_Paged_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+      <Parameter Name="stateID" Mode="In" Type="String" />
+      <Parameter Name="cityID" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+      <Parameter Name="careerID" Mode="In" Type="String" />
+      <Parameter Name="kindOfWork" Mode="In" Type="String" />
+      <Parameter Name="levelID" Mode="In" Type="String" />
+      <Parameter Name="genderID" Mode="In" Type="String" />
+      <Parameter Name="eduID" Mode="In" Type="String" />
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+      <Parameter Name="ageID" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="startRowIndex" Mode="In" Type="Int32" />
+      <Parameter Name="maxNumRows" Mode="In" Type="Int32" />
+      <Parameter Name="startWith" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalariesByCareerAndLocationForCheck_Paged" ReturnType="Collection(Salaries_PRODModel.GetSalariesByCareerAndLocationForCheck_Paged_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+      <Parameter Name="stateID" Mode="In" Type="String" />
+      <Parameter Name="cityID" Mode="In" Type="String" />
+      <Parameter Name="isEUSurvey" Mode="In" Type="String" />
+      <Parameter Name="careerGroupID" Mode="In" Type="String" />
+      <Parameter Name="careerID" Mode="In" Type="String" />
+      <Parameter Name="kindOfWork" Mode="In" Type="String" />
+      <Parameter Name="levelID" Mode="In" Type="String" />
+      <Parameter Name="genderID" Mode="In" Type="String" />
+      <Parameter Name="eduID" Mode="In" Type="String" />
+      <Parameter Name="experienceID" Mode="In" Type="String" />
+      <Parameter Name="ageID" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="startRowIndex" Mode="In" Type="Int32" />
+      <Parameter Name="maxNumRows" Mode="In" Type="Int32" />
+      <Parameter Name="startWith" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalariesGroupedByCountriesAll" ReturnType="Collection(Salaries_PRODModel.GetSalariesGroupedByCountriesAll_Result)" />
+    <FunctionImport Name="GetSalaryDetailsByID" ReturnType="Collection(Salaries_PRODModel.GetSalaryDetailsByID_Result)">
+      <Parameter Name="pID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalaryURL_BySourceID" ReturnType="Collection(Salaries_PRODModel.GetSalaryURL_BySourceID_Result)">
+      <Parameter Name="pSourceID" Mode="In" Type="String" />
+      <Parameter Name="pKindOfView" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSalaryURL_ByURLID" ReturnType="Collection(Salaries_PRODModel.GetSalaryURL_ByURLID_Result)">
+      <Parameter Name="URLID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetState_ByID" ReturnType="Collection(Salaries_PRODModel.GetState_ByID_Result)">
+      <Parameter Name="stateID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetStates_ALL" ReturnType="Collection(Salaries_PRODModel.GetStates_ALL_Result)" />
+    <FunctionImport Name="GetStates_ByCityID" ReturnType="Collection(Salaries_PRODModel.GetStates_ByCityID_Result)">
+      <Parameter Name="cityID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetStatesForCountryID_ALL" ReturnType="Collection(Salaries_PRODModel.GetStatesForCountryID_ALL_Result)">
+      <Parameter Name="countryID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetVisitor_ByVisitorIP" ReturnType="Collection(Salaries_PRODModel.GetVisitor_ByVisitorIP_Result)">
+      <Parameter Name="visitorIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Payment">
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="LatestPayment" Mode="In" Type="DateTime" />
+      <Parameter Name="KindOfPayment" Mode="In" Type="String" />
+      <Parameter Name="VisitorIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Proceed" ReturnType="Collection(Decimal)">
+      <Parameter Name="ProceedID" Mode="In" Type="Int32" />
+      <Parameter Name="VisitorIP" Mode="In" Type="String" />
+      <Parameter Name="ProceedFromPage" Mode="In" Type="String" />
+      <Parameter Name="SalaryAddedAttempts" Mode="In" Type="String" />
+      <Parameter Name="ProceedErrors" Mode="In" Type="String" />
+      <Parameter Name="SalaryAdded" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Salary">
+      <Parameter Name="Country" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="CareerGroup" Mode="In" Type="String" />
+      <Parameter Name="Career" Mode="In" Type="String" />
+      <Parameter Name="CareerDescription" Mode="In" Type="String" />
+      <Parameter Name="GrossSalary" Mode="In" Type="Int32" />
+      <Parameter Name="NetSalary" Mode="In" Type="Int32" />
+      <Parameter Name="Experiences" Mode="In" Type="String" />
+      <Parameter Name="Education" Mode="In" Type="String" />
+      <Parameter Name="PermanentContract" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="Age" Mode="In" Type="Int32" />
+      <Parameter Name="VisitorIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Insert_Visitor">
+      <Parameter Name="visitorIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertArticle">
+      <Parameter Name="articleType" Mode="In" Type="String" />
+      <Parameter Name="articleCountryStateCity" Mode="In" Type="String" />
+      <Parameter Name="articleContent" Mode="In" Type="String" />
+      <Parameter Name="country" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertComment">
+      <Parameter Name="CommentForURL" Mode="In" Type="String" />
+      <Parameter Name="CommentText" Mode="In" Type="String" />
+      <Parameter Name="CommentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="AuthorName" Mode="In" Type="String" />
+      <Parameter Name="AuthorIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="IsCityInTheCountry" ReturnType="Collection(Salaries_PRODModel.IsCityInTheCountry_Result)">
+      <Parameter Name="CityID" Mode="In" Type="String" />
+      <Parameter Name="CountryID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="IsSalaryForIPAdded_InLast24Months" ReturnType="Collection(String)">
+      <Parameter Name="pID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateArticle">
+      <Parameter Name="articleType" Mode="In" Type="String" />
+      <Parameter Name="articleCountryStateCity" Mode="In" Type="String" />
+      <Parameter Name="articleContent" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCareer">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ImageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCareerGroup">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ImageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCity">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ImageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateComment">
+      <Parameter Name="CommentID" Mode="In" Type="Int32" />
+      <Parameter Name="commentText" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCountry">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ImageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCurrencyEUR_ByID">
+      <Parameter Name="currencyID" Mode="In" Type="String" />
+      <Parameter Name="currencyRatioToEUR" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCurrencyUSD_ByID">
+      <Parameter Name="currencyID" Mode="In" Type="String" />
+      <Parameter Name="currencyRatioToUSD" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateProceed_ByID">
+      <Parameter Name="ProceedID" Mode="In" Type="Int32" />
+      <Parameter Name="VisitorIP" Mode="In" Type="String" />
+      <Parameter Name="ProceedFromPage" Mode="In" Type="String" />
+      <Parameter Name="SalaryAddedAttempts" Mode="In" Type="String" />
+      <Parameter Name="ProceedErrors" Mode="In" Type="String" />
+      <Parameter Name="SalaryAdded" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateState">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ImageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateVisitorAttempt_ByVisitorIP">
+      <Parameter Name="visitorIP" Mode="In" Type="String" />
+      <Parameter Name="currentAttempts" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Get_Payment_ForEmail_Result">
+    <Property Type="String" Name="EmailID" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="LatestPayment" Nullable="true" Precision="23" />
+    <Property Type="String" Name="KindOfPayment" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="VisitorIP" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GetAge_ByID_Result">
+    <Property Type="Int16" Name="AgeId" Nullable="false" />
+    <Property Type="Int16" Name="AgeFrom" Nullable="false" />
+    <Property Type="Int16" Name="AgeTo" Nullable="false" />
+    <Property Type="String" Name="AgeName" Nullable="false" MaxLength="7" />
+  </ComplexType>
+  <ComplexType Name="GetCareer_ByID_Result">
+    <Property Type="String" Name="CareerID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="CareerURL" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CareerNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCareerGroup_ByID_Result">
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerGroupName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CareerGroupDescription" Nullable="true" />
+    <Property Type="String" Name="CareerGroupURL" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="CareerGroupImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CareerGroupNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCareerGroups_ALL_Result">
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerGroupName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CareerGroupDescription" Nullable="true" />
+    <Property Type="String" Name="CareerGroupURL" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="CareerGroupImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CareerGroupNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCareerGroupsForSelect_ALL_Result">
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerGroupName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCareers_ALL_Result">
+    <Property Type="String" Name="CareerID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="CareerURL" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CareerNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCareers_ForCareerGroupID_Result">
+    <Property Type="String" Name="CareerID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="CareerURL" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CareerNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCities_ALL_Result">
+    <Property Type="String" Name="CityID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CityImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CityNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCities_ByCountryID_Result">
+    <Property Type="String" Name="CityID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CityImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CityNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCities_ByStateID_Result">
+    <Property Type="String" Name="CityID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CityImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CityNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCity_ByID_Result">
+    <Property Type="String" Name="CityID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CityImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CityNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetComment_ByID_Result">
+    <Property Type="Int32" Name="CommentID" Nullable="false" />
+    <Property Type="String" Name="CommentForURL" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="CommentText" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="CommentDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="AuthorName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="AuthorIP" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetComments_ByUrlID_Result">
+    <Property Type="Int32" Name="CommentID" Nullable="false" />
+    <Property Type="String" Name="CommentForURL" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="CommentText" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="CommentDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="AuthorName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="AuthorIP" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GetCountnries_ALL_Result">
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="CountryAverageSalary" Nullable="true" />
+    <Property Type="Int32" Name="CountryAverageSalaryUSD" Nullable="true" />
+    <Property Type="Decimal" Name="CurrencyRatioToUSD" Nullable="true" Precision="8" Scale="2" />
+    <Property Type="String" Name="CountryScale" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ConvertToUSD" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CountryURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CountryImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CountryNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCountnriesForSelect_ALL_Result">
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCountries_ALL_Result">
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="CountryAverageSalary" Nullable="true" />
+    <Property Type="Int32" Name="CountryAverageSalaryUSD" Nullable="true" />
+    <Property Type="Decimal" Name="CurrencyRatioToUSD" Nullable="true" Precision="8" Scale="2" />
+    <Property Type="String" Name="CountryScale" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ConvertToUSD" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CountryURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CountryImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CountryNameForURL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CurrencyID" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetCountriesForSelect_ALL_Result">
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetCountry_ByID_Result">
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="CountryAverageSalary" Nullable="true" />
+    <Property Type="Int32" Name="CountryAverageSalaryUSD" Nullable="true" />
+    <Property Type="Decimal" Name="CurrencyRatioToUSD" Nullable="true" Precision="8" Scale="2" />
+    <Property Type="String" Name="CountryScale" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ConvertToUSD" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CountryURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CountryImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CountryNameForURL" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName1" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="CurrencyRatioToUSD1" Nullable="true" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetCurrencies_ALL_Result">
+    <Property Type="String" Name="CurrencyID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="CurrencyRatioToUSD" Nullable="true" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetCurrency_ByID_Result">
+    <Property Type="String" Name="CurrencyID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="CurrencyRatioToUSD" Nullable="true" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetEducation_ALL_Result">
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="EducationImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="EducationNameForURL" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetEducation_ByID_Result">
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="EducationImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="EducationNameForURL" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetExperience_ALL_Result">
+    <Property Type="String" Name="ExperienceID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ExperienceImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ExperienceNameForURL" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetExperience_ByID_Result">
+    <Property Type="String" Name="ExperienceID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ExperienceImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ExperienceNameForURL" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetGender_ByID_Result">
+    <Property Type="String" Name="GenderID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="GenderName" Nullable="true" MaxLength="6" />
+  </ComplexType>
+  <ComplexType Name="GetInternalLinks_ByFromID_Result">
+    <Property Type="Int16" Name="LinkOrder" Nullable="false" />
+    <Property Type="String" Name="LinkFromType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="LinkFromID" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="LinkToType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="LinkToID" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="cLinkToName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="cLinkToURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetKindOfWork_ByID_Result">
+    <Property Type="String" Name="KindOfWorkID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="KindOfWorkName" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GetPageContent_ByID_Result">
+    <Property Type="String" Name="ArticleID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ArticleName" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleDescription" Nullable="true" />
+    <Property Type="String" Name="ArticleContent" Nullable="true" />
+    <Property Type="String" Name="ArticlePageTitle" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaDescription" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaKeywords" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleWrittenBy" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="ArticleDate" Nullable="false" Precision="16" />
+    <Property Type="String" Name="ArticleAutoContent" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="ArticlePriority" Nullable="true" />
+    <Property Type="Int32" Name="ArticleViews" Nullable="true" />
+    <Property Type="String" Name="ArticleCountryStateCity" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="ArticleType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IDcountry" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CityID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="cForIDName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetPageContent_ByParameters_Result">
+    <Property Type="String" Name="ArticleID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ArticleName" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleDescription" Nullable="true" />
+    <Property Type="String" Name="ArticleContent" Nullable="true" />
+    <Property Type="String" Name="ArticlePageTitle" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaDescription" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaKeywords" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleWrittenBy" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="ArticleDate" Nullable="false" Precision="16" />
+    <Property Type="String" Name="ArticleAutoContent" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="ArticlePriority" Nullable="true" />
+    <Property Type="Int32" Name="ArticleViews" Nullable="true" />
+    <Property Type="String" Name="ArticleCountryStateCity" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="ArticleType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IDcountry" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetPageContent_ForID_Result">
+    <Property Type="String" Name="ArticleID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ArticleName" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleDescription" Nullable="true" />
+    <Property Type="String" Name="ArticleContent" Nullable="true" />
+    <Property Type="String" Name="ArticlePageTitle" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaDescription" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticlePageMetaKeywords" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArticleWrittenBy" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="ArticleDate" Nullable="false" Precision="16" />
+    <Property Type="String" Name="ArticleAutoContent" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="ArticlePriority" Nullable="true" />
+    <Property Type="Int32" Name="ArticleViews" Nullable="true" />
+    <Property Type="String" Name="ArticleCountryStateCity" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="ArticleType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IDcountry" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="cForIDName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetProceed_ByID_Result">
+    <Property Type="Int32" Name="ProceedID" Nullable="false" />
+    <Property Type="String" Name="VisitorIP" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ProceedFromPage" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SalaryAddedAttempts" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="SalaryAdded" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ProceedErrors" Nullable="true" />
+    <Property Type="DateTime" Name="ProceedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetRange_ByUrlID_Result">
+    <Property Type="Int16" Name="ID" Nullable="false" />
+    <Property Type="Int16" Name="RangeID" Nullable="true" />
+    <Property Type="Decimal" Name="RangeFrom" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="RangeTo" Nullable="true" Precision="19" />
+    <Property Type="String" Name="RangeText" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="Scale" Nullable="true" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="GetSalariesByCareerAndLocation_ForDetails_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="16" />
+    <Property Type="Int64" Name="GrossSalary" Nullable="false" />
+    <Property Type="Double" Name="GrossSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="PermanentContract" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="IsSalaryChecked" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+    <Property Type="Int16" Name="Age" Nullable="true" />
+    <Property Type="Int32" Name="AgeID" Nullable="true" />
+    <Property Type="String" Name="Education" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Experiences" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="SalaryLevel" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelEUR" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelUSD" Nullable="true" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CareerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ExperienceID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetSalariesByCareerAndLocation_Paged_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="16" />
+    <Property Type="Int64" Name="GrossSalary" Nullable="false" />
+    <Property Type="Double" Name="GrossSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="PermanentContract" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="IsSalaryChecked" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+    <Property Type="Int16" Name="Age" Nullable="true" />
+    <Property Type="Int32" Name="AgeID" Nullable="true" />
+    <Property Type="String" Name="Education" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Experiences" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="SalaryLevel" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelEUR" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelUSD" Nullable="true" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CareerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ExperienceID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetSalariesByCareerAndLocationForCheck_Paged_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="16" />
+    <Property Type="Int64" Name="GrossSalary" Nullable="false" />
+    <Property Type="Double" Name="GrossSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="PermanentContract" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="String" Name="IsSalaryChecked" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+    <Property Type="Int16" Name="Age" Nullable="true" />
+    <Property Type="Int32" Name="AgeID" Nullable="true" />
+    <Property Type="String" Name="Education" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Experiences" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="SalaryLevel" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelEUR" Nullable="true" />
+    <Property Type="Int32" Name="SalaryLevelUSD" Nullable="true" />
+    <Property Type="String" Name="CareerGroupID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CareerID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CareerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ExperienceID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IsEU" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="GetSalariesGroupedByCountriesAll_Result">
+    <Property Type="Int64" Name="GrossSalary" Nullable="true" />
+    <Property Type="Int64" Name="NetSalary" Nullable="true" />
+    <Property Type="String" Name="Currency" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CurrencyName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="CurrencyRatioToUSD" Nullable="true" Precision="8" Scale="2" />
+    <Property Type="String" Name="Country" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetSalaryDetailsByID_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="SalaryID" Nullable="false" MaxLength="25" />
+    <Property Type="DateTime" Name="DateUpdated" Nullable="false" Precision="16" />
+    <Property Type="Int64" Name="GrossSalary" Nullable="false" />
+    <Property Type="Int64" Name="NetSalary" Nullable="false" />
+    <Property Type="Double" Name="GrossSalaryUSD" Nullable="true" />
+    <Property Type="Double" Name="NetSalaryUSD" Nullable="true" />
+    <Property Type="Int32" Name="SalaryEntries" Nullable="false" />
+    <Property Type="String" Name="CareerDescription" Nullable="true" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="Int16" Name="YearsAtCurrentEmployeer" Nullable="true" />
+    <Property Type="Int16" Name="NumberOfAllCompanies" Nullable="true" />
+    <Property Type="String" Name="HoursOfEducation" Nullable="true" MaxLength="2" />
+    <Property Type="Int16" Name="WorkSatisfaction" Nullable="true" />
+    <Property Type="Int16" Name="CompanySatisfaction" Nullable="true" />
+    <Property Type="Int16" Name="SalarySatisfaction" Nullable="true" />
+    <Property Type="String" Name="CurrencyID" Nullable="true" MaxLength="3" />
+    <Property Type="Double" Name="CurrencyRatioToUSD" Nullable="true" />
+    <Property Type="String" Name="EducationID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="EducationName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ExperienceID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ExperienceName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CityID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="IsEu" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ConvertToUSD" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="CountryAverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="StateName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CareerGroupID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CareerGroupName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CareerID" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CareerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="GenderID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="GenderName" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="KindOfWorkID" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="KindOfWorkName" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="GetSalaryURL_BySourceID_Result">
+    <Property Type="String" Name="URLID" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="SourceID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="SourceType" Nullable="false" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="GetSalaryURL_ByURLID_Result">
+    <Property Type="String" Name="URLID" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="SourceID" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="SourceType" Nullable="false" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="GetState_ByID_Result">
+    <Property Type="String" Name="StateID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="StateImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="StateNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetStates_ALL_Result">
+    <Property Type="String" Name="StateID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="StateImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="StateNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetStates_ByCityID_Result">
+    <Property Type="String" Name="StateID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="StateImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="StateNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetStatesForCountryID_ALL_Result">
+    <Property Type="String" Name="StateID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="CountryID" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="StateName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="StateImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="StateNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetVisitor_ByVisitorIP_Result">
+    <Property Type="DateTime" Name="DateVisited" Nullable="true" Precision="16" />
+    <Property Type="String" Name="VisitorIP" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="VisitorBrowser" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="IsMobileDevice" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="Attempt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="IsCityInTheCountry_Result">
+    <Property Type="String" Name="CityID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="CountryID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="AverageSalaryUSD" Nullable="true" />
+    <Property Type="String" Name="StateID" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="CityURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CityImageURL" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ContentID" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="CityNameForURL" Nullable="true" MaxLength="100" />
+  </ComplexType>
+</Schema>

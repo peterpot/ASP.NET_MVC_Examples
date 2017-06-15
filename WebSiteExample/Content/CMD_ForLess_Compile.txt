@@ -1,0 +1,1 @@
+lessc C:\VS_Test\_C#_ExamplesCode\WebSiteExample\Content\StyleTest.less C:\VS_Test\_C#_ExamplesCode\WebSiteExample\Content\StyleTest.css

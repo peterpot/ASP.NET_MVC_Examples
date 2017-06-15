@@ -1,0 +1,1173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Salaries_PRODModelStoreContainer" CdmEntityContainer="Salaries_PRODEntities">
+    <EntitySetMapping Name="AGES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.AGE">
+        <MappingFragment StoreEntitySet="AGES">
+          <ScalarProperty Name="AgeId" ColumnName="AgeId" />
+          <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+          <ScalarProperty Name="AgeTo" ColumnName="AgeTo" />
+          <ScalarProperty Name="AgeName" ColumnName="AgeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARTICLES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.ARTICLE">
+        <MappingFragment StoreEntitySet="ARTICLES">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleDescription" ColumnName="ArticleDescription" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="ArticlePageTitle" ColumnName="ArticlePageTitle" />
+          <ScalarProperty Name="ArticlePageMetaDescription" ColumnName="ArticlePageMetaDescription" />
+          <ScalarProperty Name="ArticlePageMetaKeywords" ColumnName="ArticlePageMetaKeywords" />
+          <ScalarProperty Name="ArticleWrittenBy" ColumnName="ArticleWrittenBy" />
+          <ScalarProperty Name="ArticleDate" ColumnName="ArticleDate" />
+          <ScalarProperty Name="ArticleAutoContent" ColumnName="ArticleAutoContent" />
+          <ScalarProperty Name="ArticlePriority" ColumnName="ArticlePriority" />
+          <ScalarProperty Name="ArticleViews" ColumnName="ArticleViews" />
+          <ScalarProperty Name="ArticleCountryStateCity" ColumnName="ArticleCountryStateCity" />
+          <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+          <ScalarProperty Name="IDcountry" ColumnName="IDcountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAREERGROUPS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.CAREERGROUP">
+        <MappingFragment StoreEntitySet="CAREERGROUPS">
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+          <ScalarProperty Name="CareerGroupDescription" ColumnName="CareerGroupDescription" />
+          <ScalarProperty Name="CareerGroupURL" ColumnName="CareerGroupURL" />
+          <ScalarProperty Name="CareerGroupImageURL" ColumnName="CareerGroupImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerGroupNameForURL" ColumnName="CareerGroupNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAREERS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.CAREER">
+        <MappingFragment StoreEntitySet="CAREERS">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="CareerURL" ColumnName="CareerURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerNameForURL" ColumnName="CareerNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CITIES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.CITy">
+        <MappingFragment StoreEntitySet="CITIES">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMENTS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.COMMENT">
+        <MappingFragment StoreEntitySet="COMMENTS">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="CommentForURL" ColumnName="CommentForURL" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="AuthorIP" ColumnName="AuthorIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTRIES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.COUNTRy">
+        <MappingFragment StoreEntitySet="COUNTRIES">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CountryAverageSalary" ColumnName="CountryAverageSalary" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="CountryScale" ColumnName="CountryScale" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CountryURL" ColumnName="CountryURL" />
+          <ScalarProperty Name="CountryImageURL" ColumnName="CountryImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CountryNameForURL" ColumnName="CountryNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURRENCIES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.CURRENCy">
+        <MappingFragment StoreEntitySet="CURRENCIES">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURRENCIESUSDs">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.CURRENCIESUSD">
+        <MappingFragment StoreEntitySet="CURRENCIESUSD">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyYear" ColumnName="CurrencyYear" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="CurrencyRatioToEUR" ColumnName="CurrencyRatioToEUR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENDERs">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.GENDER">
+        <MappingFragment StoreEntitySet="GENDER">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KINDOFWORKs">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.KINDOFWORK">
+        <MappingFragment StoreEntitySet="KINDOFWORK">
+          <ScalarProperty Name="KindOfWorkID" ColumnName="KindOfWorkID" />
+          <ScalarProperty Name="KindOfWorkName" ColumnName="KindOfWorkName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYMENTS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.PAYMENT">
+        <MappingFragment StoreEntitySet="PAYMENTS">
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LatestPayment" ColumnName="LatestPayment" />
+          <ScalarProperty Name="KindOfPayment" ColumnName="KindOfPayment" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANGEGROUPS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.RANGEGROUP">
+        <MappingFragment StoreEntitySet="RANGEGROUPS">
+          <ScalarProperty Name="RangeGroupID" ColumnName="RangeGroupID" />
+          <ScalarProperty Name="RangeGroupName" ColumnName="RangeGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESTRICTEDs">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.RESTRICTED">
+        <MappingFragment StoreEntitySet="RESTRICTED">
+          <ScalarProperty Name="RestrictedIP" ColumnName="RestrictedIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESTRICTEDBROWSERS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.RESTRICTEDBROWSER">
+        <MappingFragment StoreEntitySet="RESTRICTEDBROWSERS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BrowserVersion" ColumnName="BrowserVersion" />
+          <ScalarProperty Name="BrowserSettings" ColumnName="BrowserSettings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALARIES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.SALARy">
+        <MappingFragment StoreEntitySet="SALARIES">
+          <ScalarProperty Name="SalaryID" ColumnName="SalaryID" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CareerGroup" ColumnName="CareerGroup" />
+          <ScalarProperty Name="Career" ColumnName="Career" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="NetSalary" ColumnName="NetSalary" />
+          <ScalarProperty Name="Experiences" ColumnName="Experiences" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="PermanentContract" ColumnName="PermanentContract" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="VisitorCountry" ColumnName="VisitorCountry" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="YearsAtCurrentEmployeer" ColumnName="YearsAtCurrentEmployeer" />
+          <ScalarProperty Name="NumberOfAllCompanies" ColumnName="NumberOfAllCompanies" />
+          <ScalarProperty Name="HoursOfEducation" ColumnName="HoursOfEducation" />
+          <ScalarProperty Name="WorkSatisfaction" ColumnName="WorkSatisfaction" />
+          <ScalarProperty Name="CompanySatisfaction" ColumnName="CompanySatisfaction" />
+          <ScalarProperty Name="SalarySatisfaction" ColumnName="SalarySatisfaction" />
+          <ScalarProperty Name="WorkHoursPerWeek" ColumnName="WorkHoursPerWeek" />
+          <ScalarProperty Name="SportsPerWeek" ColumnName="SportsPerWeek" />
+          <ScalarProperty Name="SleepPerDay" ColumnName="SleepPerDay" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="ProceedID" ColumnName="ProceedID" />
+          <ScalarProperty Name="SalaryLevel" ColumnName="SalaryLevel" />
+          <ScalarProperty Name="SalaryLevelEUR" ColumnName="SalaryLevelEUR" />
+          <ScalarProperty Name="SalaryLevelUSD" ColumnName="SalaryLevelUSD" />
+          <ScalarProperty Name="IsSalaryChecked" ColumnName="IsSalaryChecked" />
+          <ScalarProperty Name="AgeID" ColumnName="AgeID" />
+          <ScalarProperty Name="IsBrowser" ColumnName="IsBrowser" />
+          <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          <ScalarProperty Name="BrowserVersion" ColumnName="BrowserVersion" />
+          <ScalarProperty Name="BrowserSettings" ColumnName="BrowserSettings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="URLS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.URL">
+        <MappingFragment StoreEntitySet="URLS">
+          <ScalarProperty Name="URLID" ColumnName="URLID" />
+          <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPERIENCES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.EXPERIENCE">
+        <MappingFragment StoreEntitySet="EXPERIENCES">
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="ExperienceImageURL" ColumnName="ExperienceImageURL" />
+          <ScalarProperty Name="ExperienceNameForURL" ColumnName="ExperienceNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEEDBACKS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.FEEDBACK">
+        <MappingFragment StoreEntitySet="FEEDBACKS">
+          <ScalarProperty Name="FeedbackID" ColumnName="FeedbackID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FeedbackDate" ColumnName="FeedbackDate" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTERNALLINKS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.INTERNALLINK">
+        <MappingFragment StoreEntitySet="INTERNALLINKS">
+          <ScalarProperty Name="LinkOrder" ColumnName="LinkOrder" />
+          <ScalarProperty Name="LinkFromType" ColumnName="LinkFromType" />
+          <ScalarProperty Name="LinkToType" ColumnName="LinkToType" />
+          <ScalarProperty Name="LinkFromID" ColumnName="LinkFromID" />
+          <ScalarProperty Name="LinkToID" ColumnName="LinkToID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROCEEDS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.PROCEED">
+        <MappingFragment StoreEntitySet="PROCEEDS">
+          <ScalarProperty Name="ProceedID" ColumnName="ProceedID" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="ProceedFromPage" ColumnName="ProceedFromPage" />
+          <ScalarProperty Name="SalaryAddedAttempts" ColumnName="SalaryAddedAttempts" />
+          <ScalarProperty Name="SalaryAdded" ColumnName="SalaryAdded" />
+          <ScalarProperty Name="ProceedErrors" ColumnName="ProceedErrors" />
+          <ScalarProperty Name="ProceedDate" ColumnName="ProceedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANGES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.RANx">
+        <MappingFragment StoreEntitySet="RANGES">
+          <ScalarProperty Name="RangeGroupID" ColumnName="RangeGroupID" />
+          <ScalarProperty Name="RangeID" ColumnName="RangeID" />
+          <ScalarProperty Name="RangeFrom" ColumnName="RangeFrom" />
+          <ScalarProperty Name="RangeTo" ColumnName="RangeTo" />
+          <ScalarProperty Name="RangeAverage" ColumnName="RangeAverage" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALARYANSWERS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.SALARYANSWER">
+        <MappingFragment StoreEntitySet="SALARYANSWERS">
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="AnswerID" ColumnName="AnswerID" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="IsBrowser" ColumnName="IsBrowser" />
+          <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          <ScalarProperty Name="BrowserVersion" ColumnName="BrowserVersion" />
+          <ScalarProperty Name="BrowserSettings" ColumnName="BrowserSettings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALARYLEVELS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.SALARYLEVEL">
+        <MappingFragment StoreEntitySet="SALARYLEVELS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RangeID" ColumnName="RangeID" />
+          <ScalarProperty Name="RangeFrom" ColumnName="RangeFrom" />
+          <ScalarProperty Name="RangeTo" ColumnName="RangeTo" />
+          <ScalarProperty Name="RangeText" ColumnName="RangeText" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="Scale" ColumnName="Scale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALARYQUESTIONS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.SALARYQUESTION">
+        <MappingFragment StoreEntitySet="SALARYQUESTIONS">
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="QuestionSubject" ColumnName="QuestionSubject" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+          <ScalarProperty Name="UserStarted" ColumnName="UserStarted" />
+          <ScalarProperty Name="DateLastAnswer" ColumnName="DateLastAnswer" />
+          <ScalarProperty Name="AnswersCount" ColumnName="AnswersCount" />
+          <ScalarProperty Name="ViewsCount" ColumnName="ViewsCount" />
+          <ScalarProperty Name="UserLastPost" ColumnName="UserLastPost" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="IsBrowser" ColumnName="IsBrowser" />
+          <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          <ScalarProperty Name="BrowserVersion" ColumnName="BrowserVersion" />
+          <ScalarProperty Name="BrowserSettings" ColumnName="BrowserSettings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.STATE">
+        <MappingFragment StoreEntitySet="STATES">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateURL" ColumnName="StateURL" />
+          <ScalarProperty Name="StateImageURL" ColumnName="StateImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="StateNameForURL" ColumnName="StateNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISITORS">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.VISITOR">
+        <MappingFragment StoreEntitySet="VISITORS">
+          <ScalarProperty Name="VisitorsCount" ColumnName="VisitorsCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewSalaries">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.viewSalary">
+        <MappingFragment StoreEntitySet="viewSalaries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="PermanentContract" ColumnName="PermanentContract" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="IsSalaryChecked" ColumnName="IsSalaryChecked" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="AgeID" ColumnName="AgeID" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Experiences" ColumnName="Experiences" />
+          <ScalarProperty Name="SalaryLevel" ColumnName="SalaryLevel" />
+          <ScalarProperty Name="SalaryLevelEUR" ColumnName="SalaryLevelEUR" />
+          <ScalarProperty Name="SalaryLevelUSD" ColumnName="SalaryLevelUSD" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewSalaries_ALL">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.viewSalaries_ALL">
+        <MappingFragment StoreEntitySet="viewSalaries_ALL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SalaryID" ColumnName="SalaryID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="NetSalary" ColumnName="NetSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="NetSalaryUSD" ColumnName="NetSalaryUSD" />
+          <ScalarProperty Name="SalaryEntries" ColumnName="SalaryEntries" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="YearsAtCurrentEmployeer" ColumnName="YearsAtCurrentEmployeer" />
+          <ScalarProperty Name="NumberOfAllCompanies" ColumnName="NumberOfAllCompanies" />
+          <ScalarProperty Name="HoursOfEducation" ColumnName="HoursOfEducation" />
+          <ScalarProperty Name="WorkSatisfaction" ColumnName="WorkSatisfaction" />
+          <ScalarProperty Name="CompanySatisfaction" ColumnName="CompanySatisfaction" />
+          <ScalarProperty Name="SalarySatisfaction" ColumnName="SalarySatisfaction" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEu" ColumnName="IsEu" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="KindOfWorkID" ColumnName="KindOfWorkID" />
+          <ScalarProperty Name="KindOfWorkName" ColumnName="KindOfWorkName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Add_Update_PageContent" FunctionName="Salaries_PRODModel.Store.Add_Update_PageContent" />
+    <FunctionImportMapping FunctionImportName="DeleteComment" FunctionName="Salaries_PRODModel.Store.DeleteComment" />
+    <FunctionImportMapping FunctionImportName="Get_Payment_ForEmail" FunctionName="Salaries_PRODModel.Store.Get_Payment_ForEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.Get_Payment_ForEmail_Result">
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LatestPayment" ColumnName="LatestPayment" />
+          <ScalarProperty Name="KindOfPayment" ColumnName="KindOfPayment" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAge_ByID" FunctionName="Salaries_PRODModel.Store.GetAge_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetAge_ByID_Result">
+          <ScalarProperty Name="AgeId" ColumnName="AgeId" />
+          <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+          <ScalarProperty Name="AgeTo" ColumnName="AgeTo" />
+          <ScalarProperty Name="AgeName" ColumnName="AgeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetArticleID_ByLocationID" FunctionName="Salaries_PRODModel.Store.GetArticleID_ByLocationID" />
+    <FunctionImportMapping FunctionImportName="GetCareer_ByID" FunctionName="Salaries_PRODModel.Store.GetCareer_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareer_ByID_Result">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="CareerURL" ColumnName="CareerURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerNameForURL" ColumnName="CareerNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCareerGroup_ByID" FunctionName="Salaries_PRODModel.Store.GetCareerGroup_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareerGroup_ByID_Result">
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+          <ScalarProperty Name="CareerGroupDescription" ColumnName="CareerGroupDescription" />
+          <ScalarProperty Name="CareerGroupURL" ColumnName="CareerGroupURL" />
+          <ScalarProperty Name="CareerGroupImageURL" ColumnName="CareerGroupImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerGroupNameForURL" ColumnName="CareerGroupNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCareerGroups_ALL" FunctionName="Salaries_PRODModel.Store.GetCareerGroups_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareerGroups_ALL_Result">
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+          <ScalarProperty Name="CareerGroupDescription" ColumnName="CareerGroupDescription" />
+          <ScalarProperty Name="CareerGroupURL" ColumnName="CareerGroupURL" />
+          <ScalarProperty Name="CareerGroupImageURL" ColumnName="CareerGroupImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerGroupNameForURL" ColumnName="CareerGroupNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCareerGroupsForSelect_ALL" FunctionName="Salaries_PRODModel.Store.GetCareerGroupsForSelect_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareerGroupsForSelect_ALL_Result">
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCareers_ALL" FunctionName="Salaries_PRODModel.Store.GetCareers_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareers_ALL_Result">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="CareerURL" ColumnName="CareerURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerNameForURL" ColumnName="CareerNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCareers_ForCareerGroupID" FunctionName="Salaries_PRODModel.Store.GetCareers_ForCareerGroupID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCareers_ForCareerGroupID_Result">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="CareerURL" ColumnName="CareerURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CareerNameForURL" ColumnName="CareerNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCities_ALL" FunctionName="Salaries_PRODModel.Store.GetCities_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCities_ALL_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCities_ByCountryID" FunctionName="Salaries_PRODModel.Store.GetCities_ByCountryID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCities_ByCountryID_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCities_ByStateID" FunctionName="Salaries_PRODModel.Store.GetCities_ByStateID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCities_ByStateID_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCity_ByID" FunctionName="Salaries_PRODModel.Store.GetCity_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCity_ByID_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetComment_ByID" FunctionName="Salaries_PRODModel.Store.GetComment_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetComment_ByID_Result">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="CommentForURL" ColumnName="CommentForURL" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="AuthorIP" ColumnName="AuthorIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetComments_ByUrlID" FunctionName="Salaries_PRODModel.Store.GetComments_ByUrlID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetComments_ByUrlID_Result">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="CommentForURL" ColumnName="CommentForURL" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="AuthorIP" ColumnName="AuthorIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountnries_ALL" FunctionName="Salaries_PRODModel.Store.GetCountnries_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCountnries_ALL_Result">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CountryAverageSalary" ColumnName="CountryAverageSalary" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="CountryScale" ColumnName="CountryScale" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CountryURL" ColumnName="CountryURL" />
+          <ScalarProperty Name="CountryImageURL" ColumnName="CountryImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CountryNameForURL" ColumnName="CountryNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountnriesForSelect_ALL" FunctionName="Salaries_PRODModel.Store.GetCountnriesForSelect_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCountnriesForSelect_ALL_Result">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountries_ALL" FunctionName="Salaries_PRODModel.Store.GetCountries_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCountries_ALL_Result">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CountryAverageSalary" ColumnName="CountryAverageSalary" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="CountryScale" ColumnName="CountryScale" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CountryURL" ColumnName="CountryURL" />
+          <ScalarProperty Name="CountryImageURL" ColumnName="CountryImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CountryNameForURL" ColumnName="CountryNameForURL" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountriesForSelect_ALL" FunctionName="Salaries_PRODModel.Store.GetCountriesForSelect_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCountriesForSelect_ALL_Result">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountry_ByID" FunctionName="Salaries_PRODModel.Store.GetCountry_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCountry_ByID_Result">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CountryAverageSalary" ColumnName="CountryAverageSalary" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="CountryScale" ColumnName="CountryScale" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CountryURL" ColumnName="CountryURL" />
+          <ScalarProperty Name="CountryImageURL" ColumnName="CountryImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CountryNameForURL" ColumnName="CountryNameForURL" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyName1" ColumnName="CurrencyName1" />
+          <ScalarProperty Name="CurrencyRatioToUSD1" ColumnName="CurrencyRatioToUSD1" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCurrencies_ALL" FunctionName="Salaries_PRODModel.Store.GetCurrencies_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCurrencies_ALL_Result">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCurrency_ByID" FunctionName="Salaries_PRODModel.Store.GetCurrency_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetCurrency_ByID_Result">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetEducation_ALL" FunctionName="Salaries_PRODModel.Store.GetEducation_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetEducation_ALL_Result">
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="EducationImageURL" ColumnName="EducationImageURL" />
+          <ScalarProperty Name="EducationNameForURL" ColumnName="EducationNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetEducation_ByID" FunctionName="Salaries_PRODModel.Store.GetEducation_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetEducation_ByID_Result">
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="EducationImageURL" ColumnName="EducationImageURL" />
+          <ScalarProperty Name="EducationNameForURL" ColumnName="EducationNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetExperience_ALL" FunctionName="Salaries_PRODModel.Store.GetExperience_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetExperience_ALL_Result">
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="ExperienceImageURL" ColumnName="ExperienceImageURL" />
+          <ScalarProperty Name="ExperienceNameForURL" ColumnName="ExperienceNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetExperience_ByID" FunctionName="Salaries_PRODModel.Store.GetExperience_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetExperience_ByID_Result">
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="ExperienceImageURL" ColumnName="ExperienceImageURL" />
+          <ScalarProperty Name="ExperienceNameForURL" ColumnName="ExperienceNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetGender_ByID" FunctionName="Salaries_PRODModel.Store.GetGender_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetGender_ByID_Result">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetGroupedSalaries" FunctionName="Salaries_PRODModel.Store.GetGroupedSalaries" />
+    <FunctionImportMapping FunctionImportName="GetInternalLinks_ByFromID" FunctionName="Salaries_PRODModel.Store.GetInternalLinks_ByFromID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetInternalLinks_ByFromID_Result">
+          <ScalarProperty Name="LinkOrder" ColumnName="LinkOrder" />
+          <ScalarProperty Name="LinkFromType" ColumnName="LinkFromType" />
+          <ScalarProperty Name="LinkFromID" ColumnName="LinkFromID" />
+          <ScalarProperty Name="LinkToType" ColumnName="LinkToType" />
+          <ScalarProperty Name="LinkToID" ColumnName="LinkToID" />
+          <ScalarProperty Name="cLinkToName" ColumnName="cLinkToName" />
+          <ScalarProperty Name="cLinkToURL" ColumnName="cLinkToURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetKindOfWork_ByID" FunctionName="Salaries_PRODModel.Store.GetKindOfWork_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetKindOfWork_ByID_Result">
+          <ScalarProperty Name="KindOfWorkID" ColumnName="KindOfWorkID" />
+          <ScalarProperty Name="KindOfWorkName" ColumnName="KindOfWorkName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPageContent_ByID" FunctionName="Salaries_PRODModel.Store.GetPageContent_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetPageContent_ByID_Result">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleDescription" ColumnName="ArticleDescription" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="ArticlePageTitle" ColumnName="ArticlePageTitle" />
+          <ScalarProperty Name="ArticlePageMetaDescription" ColumnName="ArticlePageMetaDescription" />
+          <ScalarProperty Name="ArticlePageMetaKeywords" ColumnName="ArticlePageMetaKeywords" />
+          <ScalarProperty Name="ArticleWrittenBy" ColumnName="ArticleWrittenBy" />
+          <ScalarProperty Name="ArticleDate" ColumnName="ArticleDate" />
+          <ScalarProperty Name="ArticleAutoContent" ColumnName="ArticleAutoContent" />
+          <ScalarProperty Name="ArticlePriority" ColumnName="ArticlePriority" />
+          <ScalarProperty Name="ArticleViews" ColumnName="ArticleViews" />
+          <ScalarProperty Name="ArticleCountryStateCity" ColumnName="ArticleCountryStateCity" />
+          <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+          <ScalarProperty Name="IDcountry" ColumnName="IDcountry" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="cForIDName" ColumnName="cForIDName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPageContent_ByParameters" FunctionName="Salaries_PRODModel.Store.GetPageContent_ByParameters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetPageContent_ByParameters_Result">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleDescription" ColumnName="ArticleDescription" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="ArticlePageTitle" ColumnName="ArticlePageTitle" />
+          <ScalarProperty Name="ArticlePageMetaDescription" ColumnName="ArticlePageMetaDescription" />
+          <ScalarProperty Name="ArticlePageMetaKeywords" ColumnName="ArticlePageMetaKeywords" />
+          <ScalarProperty Name="ArticleWrittenBy" ColumnName="ArticleWrittenBy" />
+          <ScalarProperty Name="ArticleDate" ColumnName="ArticleDate" />
+          <ScalarProperty Name="ArticleAutoContent" ColumnName="ArticleAutoContent" />
+          <ScalarProperty Name="ArticlePriority" ColumnName="ArticlePriority" />
+          <ScalarProperty Name="ArticleViews" ColumnName="ArticleViews" />
+          <ScalarProperty Name="ArticleCountryStateCity" ColumnName="ArticleCountryStateCity" />
+          <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+          <ScalarProperty Name="IDcountry" ColumnName="IDcountry" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPageContent_ForID" FunctionName="Salaries_PRODModel.Store.GetPageContent_ForID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetPageContent_ForID_Result">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+          <ScalarProperty Name="ArticleDescription" ColumnName="ArticleDescription" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="ArticlePageTitle" ColumnName="ArticlePageTitle" />
+          <ScalarProperty Name="ArticlePageMetaDescription" ColumnName="ArticlePageMetaDescription" />
+          <ScalarProperty Name="ArticlePageMetaKeywords" ColumnName="ArticlePageMetaKeywords" />
+          <ScalarProperty Name="ArticleWrittenBy" ColumnName="ArticleWrittenBy" />
+          <ScalarProperty Name="ArticleDate" ColumnName="ArticleDate" />
+          <ScalarProperty Name="ArticleAutoContent" ColumnName="ArticleAutoContent" />
+          <ScalarProperty Name="ArticlePriority" ColumnName="ArticlePriority" />
+          <ScalarProperty Name="ArticleViews" ColumnName="ArticleViews" />
+          <ScalarProperty Name="ArticleCountryStateCity" ColumnName="ArticleCountryStateCity" />
+          <ScalarProperty Name="ArticleType" ColumnName="ArticleType" />
+          <ScalarProperty Name="IDcountry" ColumnName="IDcountry" />
+          <ScalarProperty Name="cForIDName" ColumnName="cForIDName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProceed_ByID" FunctionName="Salaries_PRODModel.Store.GetProceed_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetProceed_ByID_Result">
+          <ScalarProperty Name="ProceedID" ColumnName="ProceedID" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="ProceedFromPage" ColumnName="ProceedFromPage" />
+          <ScalarProperty Name="SalaryAddedAttempts" ColumnName="SalaryAddedAttempts" />
+          <ScalarProperty Name="SalaryAdded" ColumnName="SalaryAdded" />
+          <ScalarProperty Name="ProceedErrors" ColumnName="ProceedErrors" />
+          <ScalarProperty Name="ProceedDate" ColumnName="ProceedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRange_ByUrlID" FunctionName="Salaries_PRODModel.Store.GetRange_ByUrlID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetRange_ByUrlID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RangeID" ColumnName="RangeID" />
+          <ScalarProperty Name="RangeFrom" ColumnName="RangeFrom" />
+          <ScalarProperty Name="RangeTo" ColumnName="RangeTo" />
+          <ScalarProperty Name="RangeText" ColumnName="RangeText" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="Scale" ColumnName="Scale" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocation_Count" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocation_Count" />
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocation_Count_AllThisMonth" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocation_Count_AllThisMonth" />
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocation_Count_AllThisWeek" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocation_Count_AllThisWeek" />
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocation_ForDetails" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocation_ForDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalariesByCareerAndLocation_ForDetails_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="PermanentContract" ColumnName="PermanentContract" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="IsSalaryChecked" ColumnName="IsSalaryChecked" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="AgeID" ColumnName="AgeID" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Experiences" ColumnName="Experiences" />
+          <ScalarProperty Name="SalaryLevel" ColumnName="SalaryLevel" />
+          <ScalarProperty Name="SalaryLevelEUR" ColumnName="SalaryLevelEUR" />
+          <ScalarProperty Name="SalaryLevelUSD" ColumnName="SalaryLevelUSD" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocation_Paged" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocation_Paged">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalariesByCareerAndLocation_Paged_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="PermanentContract" ColumnName="PermanentContract" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="IsSalaryChecked" ColumnName="IsSalaryChecked" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="AgeID" ColumnName="AgeID" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Experiences" ColumnName="Experiences" />
+          <ScalarProperty Name="SalaryLevel" ColumnName="SalaryLevel" />
+          <ScalarProperty Name="SalaryLevelEUR" ColumnName="SalaryLevelEUR" />
+          <ScalarProperty Name="SalaryLevelUSD" ColumnName="SalaryLevelUSD" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalariesByCareerAndLocationForCheck_Paged" FunctionName="Salaries_PRODModel.Store.GetSalariesByCareerAndLocationForCheck_Paged">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalariesByCareerAndLocationForCheck_Paged_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="PermanentContract" ColumnName="PermanentContract" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="IsSalaryChecked" ColumnName="IsSalaryChecked" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="AgeID" ColumnName="AgeID" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Experiences" ColumnName="Experiences" />
+          <ScalarProperty Name="SalaryLevel" ColumnName="SalaryLevel" />
+          <ScalarProperty Name="SalaryLevelEUR" ColumnName="SalaryLevelEUR" />
+          <ScalarProperty Name="SalaryLevelUSD" ColumnName="SalaryLevelUSD" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalariesGroupedByCountriesAll" FunctionName="Salaries_PRODModel.Store.GetSalariesGroupedByCountriesAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalariesGroupedByCountriesAll_Result">
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="NetSalary" ColumnName="NetSalary" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalaryDetailsByID" FunctionName="Salaries_PRODModel.Store.GetSalaryDetailsByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalaryDetailsByID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SalaryID" ColumnName="SalaryID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="NetSalary" ColumnName="NetSalary" />
+          <ScalarProperty Name="GrossSalaryUSD" ColumnName="GrossSalaryUSD" />
+          <ScalarProperty Name="NetSalaryUSD" ColumnName="NetSalaryUSD" />
+          <ScalarProperty Name="SalaryEntries" ColumnName="SalaryEntries" />
+          <ScalarProperty Name="CareerDescription" ColumnName="CareerDescription" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="YearsAtCurrentEmployeer" ColumnName="YearsAtCurrentEmployeer" />
+          <ScalarProperty Name="NumberOfAllCompanies" ColumnName="NumberOfAllCompanies" />
+          <ScalarProperty Name="HoursOfEducation" ColumnName="HoursOfEducation" />
+          <ScalarProperty Name="WorkSatisfaction" ColumnName="WorkSatisfaction" />
+          <ScalarProperty Name="CompanySatisfaction" ColumnName="CompanySatisfaction" />
+          <ScalarProperty Name="SalarySatisfaction" ColumnName="SalarySatisfaction" />
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
+          <ScalarProperty Name="ExperienceName" ColumnName="ExperienceName" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="IsEu" ColumnName="IsEu" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CareerGroupID" ColumnName="CareerGroupID" />
+          <ScalarProperty Name="CareerGroupName" ColumnName="CareerGroupName" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CareerName" ColumnName="CareerName" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="KindOfWorkID" ColumnName="KindOfWorkID" />
+          <ScalarProperty Name="KindOfWorkName" ColumnName="KindOfWorkName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalaryURL_BySourceID" FunctionName="Salaries_PRODModel.Store.GetSalaryURL_BySourceID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalaryURL_BySourceID_Result">
+          <ScalarProperty Name="URLID" ColumnName="URLID" />
+          <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSalaryURL_ByURLID" FunctionName="Salaries_PRODModel.Store.GetSalaryURL_ByURLID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetSalaryURL_ByURLID_Result">
+          <ScalarProperty Name="URLID" ColumnName="URLID" />
+          <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetState_ByID" FunctionName="Salaries_PRODModel.Store.GetState_ByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetState_ByID_Result">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateURL" ColumnName="StateURL" />
+          <ScalarProperty Name="StateImageURL" ColumnName="StateImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="StateNameForURL" ColumnName="StateNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStates_ALL" FunctionName="Salaries_PRODModel.Store.GetStates_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetStates_ALL_Result">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateURL" ColumnName="StateURL" />
+          <ScalarProperty Name="StateImageURL" ColumnName="StateImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="StateNameForURL" ColumnName="StateNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStates_ByCityID" FunctionName="Salaries_PRODModel.Store.GetStates_ByCityID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetStates_ByCityID_Result">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateURL" ColumnName="StateURL" />
+          <ScalarProperty Name="StateImageURL" ColumnName="StateImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="StateNameForURL" ColumnName="StateNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStatesForCountryID_ALL" FunctionName="Salaries_PRODModel.Store.GetStatesForCountryID_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetStatesForCountryID_ALL_Result">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateURL" ColumnName="StateURL" />
+          <ScalarProperty Name="StateImageURL" ColumnName="StateImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="StateNameForURL" ColumnName="StateNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetVisitor_ByVisitorIP" FunctionName="Salaries_PRODModel.Store.GetVisitor_ByVisitorIP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.GetVisitor_ByVisitorIP_Result">
+          <ScalarProperty Name="DateVisited" ColumnName="DateVisited" />
+          <ScalarProperty Name="VisitorIP" ColumnName="VisitorIP" />
+          <ScalarProperty Name="VisitorBrowser" ColumnName="VisitorBrowser" />
+          <ScalarProperty Name="IsMobileDevice" ColumnName="IsMobileDevice" />
+          <ScalarProperty Name="Attempt" ColumnName="Attempt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Insert_Payment" FunctionName="Salaries_PRODModel.Store.Insert_Payment" />
+    <FunctionImportMapping FunctionImportName="Insert_Proceed" FunctionName="Salaries_PRODModel.Store.Insert_Proceed" />
+    <FunctionImportMapping FunctionImportName="Insert_Salary" FunctionName="Salaries_PRODModel.Store.Insert_Salary" />
+    <FunctionImportMapping FunctionImportName="Insert_Visitor" FunctionName="Salaries_PRODModel.Store.Insert_Visitor" />
+    <FunctionImportMapping FunctionImportName="InsertArticle" FunctionName="Salaries_PRODModel.Store.InsertArticle" />
+    <FunctionImportMapping FunctionImportName="InsertComment" FunctionName="Salaries_PRODModel.Store.InsertComment" />
+    <FunctionImportMapping FunctionImportName="IsCityInTheCountry" FunctionName="Salaries_PRODModel.Store.IsCityInTheCountry">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Salaries_PRODModel.IsCityInTheCountry_Result">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="AverageSalaryUSD" ColumnName="AverageSalaryUSD" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityURL" ColumnName="CityURL" />
+          <ScalarProperty Name="CityImageURL" ColumnName="CityImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CityNameForURL" ColumnName="CityNameForURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="IsSalaryForIPAdded_InLast24Months" FunctionName="Salaries_PRODModel.Store.IsSalaryForIPAdded_InLast24Months" />
+    <FunctionImportMapping FunctionImportName="UpdateArticle" FunctionName="Salaries_PRODModel.Store.UpdateArticle" />
+    <FunctionImportMapping FunctionImportName="UpdateCareer" FunctionName="Salaries_PRODModel.Store.UpdateCareer" />
+    <FunctionImportMapping FunctionImportName="UpdateCareerGroup" FunctionName="Salaries_PRODModel.Store.UpdateCareerGroup" />
+    <FunctionImportMapping FunctionImportName="UpdateCity" FunctionName="Salaries_PRODModel.Store.UpdateCity" />
+    <FunctionImportMapping FunctionImportName="UpdateComment" FunctionName="Salaries_PRODModel.Store.UpdateComment" />
+    <FunctionImportMapping FunctionImportName="UpdateCountry" FunctionName="Salaries_PRODModel.Store.UpdateCountry" />
+    <FunctionImportMapping FunctionImportName="UpdateCurrencyEUR_ByID" FunctionName="Salaries_PRODModel.Store.UpdateCurrencyEUR_ByID" />
+    <FunctionImportMapping FunctionImportName="UpdateCurrencyUSD_ByID" FunctionName="Salaries_PRODModel.Store.UpdateCurrencyUSD_ByID" />
+    <FunctionImportMapping FunctionImportName="UpdateProceed_ByID" FunctionName="Salaries_PRODModel.Store.UpdateProceed_ByID" />
+    <FunctionImportMapping FunctionImportName="UpdateState" FunctionName="Salaries_PRODModel.Store.UpdateState" />
+    <FunctionImportMapping FunctionImportName="UpdateVisitorAttempt_ByVisitorIP" FunctionName="Salaries_PRODModel.Store.UpdateVisitorAttempt_ByVisitorIP" />
+  </EntityContainerMapping>
+</Mapping>

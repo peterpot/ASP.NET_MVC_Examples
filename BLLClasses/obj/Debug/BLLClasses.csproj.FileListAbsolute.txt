@@ -1,0 +1,4 @@
+C:\VS_Test\_C#_ExamplesCode\BLLClasses\bin\Debug\BLLClasses.dll
+C:\VS_Test\_C#_ExamplesCode\BLLClasses\bin\Debug\BLLClasses.pdb
+C:\VS_Test\_C#_ExamplesCode\BLLClasses\obj\Debug\BLLClasses.dll
+C:\VS_Test\_C#_ExamplesCode\BLLClasses\obj\Debug\BLLClasses.pdb

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Salaries_PRODModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COUNTRIES">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Currency" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CountryAverageSalary" Type="bigint" />
+    <Property Name="CountryAverageSalaryUSD" Type="int" />
+    <Property Name="CurrencyRatioToUSD" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="CountryScale" Type="char" MaxLength="1" />
+    <Property Name="ConvertToUSD" Type="char" MaxLength="1" />
+    <Property Name="IsEU" Type="char" MaxLength="1" />
+    <Property Name="CountryURL" Type="varchar" MaxLength="200" />
+    <Property Name="CountryImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="CountryNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="Salaries_PRODModelStoreContainer">
+    <EntitySet Name="COUNTRIES" EntityType="Self.COUNTRIES" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

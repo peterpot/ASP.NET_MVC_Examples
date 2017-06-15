@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Salaries_PRODModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AGES">
+    <Key>
+      <PropertyRef Name="AgeId" />
+    </Key>
+    <Property Name="AgeId" Type="smallint" Nullable="false" />
+    <Property Name="AgeFrom" Type="smallint" Nullable="false" />
+    <Property Name="AgeTo" Type="smallint" Nullable="false" />
+    <Property Name="AgeName" Type="varchar" MaxLength="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ARTICLES">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArticleName" Type="varchar" MaxLength="400" />
+    <Property Name="ArticleDescription" Type="varchar(max)" />
+    <Property Name="ArticleContent" Type="varchar(max)" />
+    <Property Name="ArticlePageTitle" Type="varchar" MaxLength="400" />
+    <Property Name="ArticlePageMetaDescription" Type="varchar" MaxLength="400" />
+    <Property Name="ArticlePageMetaKeywords" Type="varchar" MaxLength="400" />
+    <Property Name="ArticleWrittenBy" Type="varchar" MaxLength="200" />
+    <Property Name="ArticleDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ArticleAutoContent" Type="varchar" MaxLength="1" />
+    <Property Name="ArticlePriority" Type="int" />
+    <Property Name="ArticleViews" Type="int" />
+    <Property Name="ArticleCountryStateCity" Type="varchar" MaxLength="80" />
+    <Property Name="ArticleType" Type="varchar" MaxLength="1" />
+    <Property Name="IDcountry" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="CAREERGROUPS">
+    <Key>
+      <PropertyRef Name="CareerGroupID" />
+    </Key>
+    <Property Name="CareerGroupID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CareerGroupName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CareerGroupDescription" Type="varchar(max)" />
+    <Property Name="CareerGroupURL" Type="varchar" MaxLength="300" />
+    <Property Name="CareerGroupImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="CareerGroupNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CAREERS">
+    <Key>
+      <PropertyRef Name="CareerID" />
+    </Key>
+    <Property Name="CareerID" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CareerGroupID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CareerName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CareerDescription" Type="varchar(max)" />
+    <Property Name="CareerURL" Type="varchar" MaxLength="500" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="CareerNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CITIES">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CountryID" Type="varchar" MaxLength="3" />
+    <Property Name="CityName" Type="varchar" MaxLength="100" />
+    <Property Name="AverageSalaryUSD" Type="int" />
+    <Property Name="StateID" Type="varchar" MaxLength="3" />
+    <Property Name="CityURL" Type="varchar" MaxLength="200" />
+    <Property Name="CityImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="CityNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COMMENTS">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommentForURL" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="CommentText" Type="text" Nullable="false" />
+    <Property Name="CommentDate" Type="datetime" Nullable="false" />
+    <Property Name="AuthorName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AuthorIP" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="COUNTRIES">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Currency" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CountryAverageSalary" Type="bigint" />
+    <Property Name="CountryAverageSalaryUSD" Type="int" />
+    <Property Name="CurrencyRatioToUSD" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="CountryScale" Type="char" MaxLength="1" />
+    <Property Name="ConvertToUSD" Type="char" MaxLength="1" />
+    <Property Name="IsEU" Type="char" MaxLength="1" />
+    <Property Name="CountryURL" Type="varchar" MaxLength="200" />
+    <Property Name="CountryImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="CountryNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CURRENCIES">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CurrencyRatioToUSD" Type="float" />
+    <Property Name="DateUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CURRENCIESUSD">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+      <PropertyRef Name="CurrencyYear" />
+    </Key>
+    <Property Name="CurrencyID" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CurrencyYear" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="CurrencyRatioToUSD" Type="float" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="CurrencyRatioToEUR" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Salaries_PROD.dbo.EDUCATION' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="EDUCATION">
+          <Property Name="EducationID" Type="varchar" MaxLength="1" />
+          <Property Name="EducationName" Type="varchar" MaxLength="40" />
+          <Property Name="EducationImageURL" Type="varchar" MaxLength="200" />
+          <Property Name="EducationNameForURL" Type="varchar" MaxLength="200" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.EXPERIENCES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EXPERIENCES">
+    <Key>
+      <PropertyRef Name="ExperienceID" />
+      <PropertyRef Name="ExperienceName" />
+    </Key>
+    <Property Name="ExperienceID" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ExperienceName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ExperienceImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ExperienceNameForURL" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.FEEDBACKS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FEEDBACKS">
+    <Key>
+      <PropertyRef Name="FeedbackID" />
+      <PropertyRef Name="Comment" />
+      <PropertyRef Name="FeedbackDate" />
+    </Key>
+    <Property Name="FeedbackID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FeedbackDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="VisitorIP" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="GENDER">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="GenderName" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.INTERNALLINKS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="INTERNALLINKS">
+    <Key>
+      <PropertyRef Name="LinkOrder" />
+    </Key>
+    <Property Name="LinkOrder" Type="smallint" Nullable="false" />
+    <Property Name="LinkFromType" Type="char" MaxLength="1" />
+    <Property Name="LinkToType" Type="char" MaxLength="1" />
+    <Property Name="LinkFromID" Type="varchar" MaxLength="10" />
+    <Property Name="LinkToID" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="KINDOFWORK">
+    <Key>
+      <PropertyRef Name="KindOfWorkID" />
+    </Key>
+    <Property Name="KindOfWorkID" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="KindOfWorkName" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="PAYMENTS">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="200" />
+    <Property Name="LatestPayment" Type="datetime" />
+    <Property Name="KindOfPayment" Type="char" MaxLength="1" />
+    <Property Name="VisitorIP" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.PROCEEDS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PROCEEDS">
+    <Key>
+      <PropertyRef Name="ProceedID" />
+    </Key>
+    <Property Name="ProceedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorIP" Type="varchar" MaxLength="20" />
+    <Property Name="ProceedFromPage" Type="varchar" MaxLength="200" />
+    <Property Name="SalaryAddedAttempts" Type="varchar" MaxLength="2" />
+    <Property Name="SalaryAdded" Type="char" MaxLength="1" />
+    <Property Name="ProceedErrors" Type="varchar(max)" />
+    <Property Name="ProceedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RANGEGROUPS">
+    <Key>
+      <PropertyRef Name="RangeGroupID" />
+    </Key>
+    <Property Name="RangeGroupID" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="RangeGroupName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.RANGES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RANGES">
+    <Key>
+      <PropertyRef Name="RangeGroupID" />
+      <PropertyRef Name="RangeID" />
+      <PropertyRef Name="RangeFrom" />
+      <PropertyRef Name="RangeTo" />
+      <PropertyRef Name="RangeAverage" />
+    </Key>
+    <Property Name="RangeGroupID" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="RangeID" Type="smallint" Nullable="false" />
+    <Property Name="RangeFrom" Type="int" Nullable="false" />
+    <Property Name="RangeTo" Type="int" Nullable="false" />
+    <Property Name="RangeAverage" Type="int" Nullable="false" />
+    <Property Name="Percentage" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="RESTRICTED">
+    <Key>
+      <PropertyRef Name="RestrictedIP" />
+    </Key>
+    <Property Name="RestrictedIP" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESTRICTEDBROWSERS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="BrowserVersion" Type="varchar" MaxLength="30" />
+    <Property Name="BrowserSettings" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="SALARIES">
+    <Key>
+      <PropertyRef Name="SalaryID" />
+    </Key>
+    <Property Name="SalaryID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="CareerGroup" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Career" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="GrossSalary" Type="bigint" Nullable="false" />
+    <Property Name="NetSalary" Type="bigint" Nullable="false" />
+    <Property Name="Experiences" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Education" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DateUpdated" Type="smalldatetime" Nullable="false" />
+    <Property Name="PermanentContract" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="VisitorIP" Type="varchar" MaxLength="20" />
+    <Property Name="VisitorCountry" Type="varchar" MaxLength="40" />
+    <Property Name="Gender" Type="char" MaxLength="1" />
+    <Property Name="Age" Type="smallint" />
+    <Property Name="YearsAtCurrentEmployeer" Type="smallint" />
+    <Property Name="NumberOfAllCompanies" Type="smallint" />
+    <Property Name="HoursOfEducation" Type="varchar" MaxLength="2" />
+    <Property Name="WorkSatisfaction" Type="smallint" />
+    <Property Name="CompanySatisfaction" Type="smallint" />
+    <Property Name="SalarySatisfaction" Type="smallint" />
+    <Property Name="WorkHoursPerWeek" Type="char" MaxLength="1" />
+    <Property Name="SportsPerWeek" Type="char" MaxLength="1" />
+    <Property Name="SleepPerDay" Type="char" MaxLength="1" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CareerDescription" Type="varchar(max)" />
+    <Property Name="ProceedID" Type="varchar" MaxLength="10" />
+    <Property Name="SalaryLevel" Type="int" />
+    <Property Name="SalaryLevelEUR" Type="int" />
+    <Property Name="SalaryLevelUSD" Type="int" />
+    <Property Name="IsSalaryChecked" Type="char" MaxLength="1" />
+    <Property Name="AgeID" Type="int" />
+    <Property Name="IsBrowser" Type="bit" />
+    <Property Name="IsMobile" Type="bit" />
+    <Property Name="BrowserVersion" Type="varchar" MaxLength="30" />
+    <Property Name="BrowserSettings" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.SALARYANSWERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SALARYANSWERS">
+    <Key>
+      <PropertyRef Name="QuestionID" />
+      <PropertyRef Name="AnswerID" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="QuestionID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="AnswerID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Answer" Type="text" />
+    <Property Name="DatePosted" Type="datetime" Nullable="false" />
+    <Property Name="DateUpdated" Type="datetime" />
+    <Property Name="UserID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="VisitorIP" Type="varchar" MaxLength="30" />
+    <Property Name="IsBrowser" Type="bit" />
+    <Property Name="IsMobile" Type="bit" />
+    <Property Name="BrowserVersion" Type="varchar" MaxLength="30" />
+    <Property Name="BrowserSettings" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.SALARYLEVELS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SALARYLEVELS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RangeID" Type="smallint" />
+    <Property Name="RangeFrom" Type="money" />
+    <Property Name="RangeTo" Type="money" />
+    <Property Name="RangeText" Type="varchar" MaxLength="4" />
+    <Property Name="CurrencyID" Type="char" MaxLength="3" />
+    <Property Name="Scale" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.SALARYQUESTIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SALARYQUESTIONS">
+    <Key>
+      <PropertyRef Name="QuestionID" />
+      <PropertyRef Name="Question" />
+      <PropertyRef Name="DateStarted" />
+      <PropertyRef Name="UserStarted" />
+    </Key>
+    <Property Name="QuestionID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="QuestionSubject" Type="varchar" MaxLength="200" />
+    <Property Name="Question" Type="text" Nullable="false" />
+    <Property Name="DateStarted" Type="datetime" Nullable="false" />
+    <Property Name="UserStarted" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateLastAnswer" Type="datetime" />
+    <Property Name="AnswersCount" Type="smallint" />
+    <Property Name="ViewsCount" Type="int" />
+    <Property Name="UserLastPost" Type="varchar" MaxLength="30" />
+    <Property Name="VisitorIP" Type="varchar" MaxLength="30" />
+    <Property Name="IsBrowser" Type="bit" />
+    <Property Name="IsMobile" Type="bit" />
+    <Property Name="BrowserVersion" Type="varchar" MaxLength="30" />
+    <Property Name="BrowserSettings" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.STATES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STATES">
+    <Key>
+      <PropertyRef Name="StateID" />
+      <PropertyRef Name="CountryID" />
+      <PropertyRef Name="StateName" />
+    </Key>
+    <Property Name="StateID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CountryID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AverageSalaryUSD" Type="int" />
+    <Property Name="StateURL" Type="varchar" MaxLength="200" />
+    <Property Name="StateImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="ContentID" Type="varchar" MaxLength="8" />
+    <Property Name="StateNameForURL" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="URLS">
+    <Key>
+      <PropertyRef Name="URLID" />
+    </Key>
+    <Property Name="URLID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SourceID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SourceType" Type="varchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.VISITORS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VISITORS">
+    <Key>
+      <PropertyRef Name="VisitorsCount" />
+    </Key>
+    <Property Name="VisitorsCount" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Salaries_PROD.dbo.VISITORSDATA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="VISITORSDATA">
+          <Property Name="DateVisited" Type="smalldatetime" />
+          <Property Name="VisitorIP" Type="varchar" MaxLength="25" />
+          <Property Name="VisitorBrowser" Type="varchar" MaxLength="200" />
+          <Property Name="IsMobileDevice" Type="char" MaxLength="1" />
+          <Property Name="Attempt" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.viewSalaries' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="viewSalaries">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DateUpdated" />
+      <PropertyRef Name="GrossSalary" />
+      <PropertyRef Name="PermanentContract" />
+      <PropertyRef Name="Education" />
+      <PropertyRef Name="Experiences" />
+      <PropertyRef Name="CareerGroupID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DateUpdated" Type="smalldatetime" Nullable="false" />
+    <Property Name="GrossSalary" Type="bigint" Nullable="false" />
+    <Property Name="GrossSalaryUSD" Type="float" />
+    <Property Name="PermanentContract" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CareerDescription" Type="varchar(max)" />
+    <Property Name="IsSalaryChecked" Type="char" MaxLength="1" />
+    <Property Name="Gender" Type="char" MaxLength="1" />
+    <Property Name="Age" Type="smallint" />
+    <Property Name="AgeID" Type="int" />
+    <Property Name="Education" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Experiences" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="SalaryLevel" Type="int" />
+    <Property Name="SalaryLevelEUR" Type="int" />
+    <Property Name="SalaryLevelUSD" Type="int" />
+    <Property Name="CareerGroupID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="CareerID" Type="varchar" MaxLength="4" />
+    <Property Name="CareerName" Type="varchar" MaxLength="100" />
+    <Property Name="EducationID" Type="varchar" MaxLength="1" />
+    <Property Name="EducationName" Type="varchar" MaxLength="40" />
+    <Property Name="ExperienceID" Type="varchar" MaxLength="1" />
+    <Property Name="ExperienceName" Type="varchar" MaxLength="20" />
+    <Property Name="CountryID" Type="varchar" MaxLength="3" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" />
+    <Property Name="IsEU" Type="char" MaxLength="1" />
+    <Property Name="CurrencyID" Type="char" MaxLength="3" />
+    <Property Name="CityID" Type="varchar" MaxLength="4" />
+    <Property Name="CityName" Type="varchar" MaxLength="100" />
+    <Property Name="StateID" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salaries_PROD.dbo.viewSalaries_ALL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="viewSalaries_ALL">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="SalaryID" />
+      <PropertyRef Name="DateUpdated" />
+      <PropertyRef Name="GrossSalary" />
+      <PropertyRef Name="NetSalary" />
+      <PropertyRef Name="GrossSalaryUSD" />
+      <PropertyRef Name="NetSalaryUSD" />
+      <PropertyRef Name="SalaryEntries" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SalaryID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DateUpdated" Type="smalldatetime" Nullable="false" />
+    <Property Name="GrossSalary" Type="bigint" Nullable="false" />
+    <Property Name="NetSalary" Type="bigint" Nullable="false" />
+    <Property Name="GrossSalaryUSD" Type="float" Nullable="false" />
+    <Property Name="NetSalaryUSD" Type="float" Nullable="false" />
+    <Property Name="SalaryEntries" Type="int" Nullable="false" />
+    <Property Name="CareerDescription" Type="varchar(max)" />
+    <Property Name="Age" Type="int" />
+    <Property Name="YearsAtCurrentEmployeer" Type="smallint" />
+    <Property Name="NumberOfAllCompanies" Type="smallint" />
+    <Property Name="HoursOfEducation" Type="varchar" MaxLength="2" />
+    <Property Name="WorkSatisfaction" Type="smallint" />
+    <Property Name="CompanySatisfaction" Type="smallint" />
+    <Property Name="SalarySatisfaction" Type="smallint" />
+    <Property Name="CurrencyID" Type="char" MaxLength="3" />
+    <Property Name="CurrencyRatioToUSD" Type="float" />
+    <Property Name="EducationID" Type="varchar" MaxLength="1" />
+    <Property Name="EducationName" Type="varchar" MaxLength="40" />
+    <Property Name="ExperienceID" Type="varchar" MaxLength="1" />
+    <Property Name="ExperienceName" Type="varchar" MaxLength="20" />
+    <Property Name="CityID" Type="varchar" MaxLength="4" />
+    <Property Name="CityName" Type="varchar" MaxLength="100" />
+    <Property Name="CountryID" Type="varchar" MaxLength="3" />
+    <Property Name="CountryName" Type="varchar" MaxLength="100" />
+    <Property Name="IsEu" Type="char" MaxLength="1" />
+    <Property Name="ConvertToUSD" Type="char" MaxLength="1" />
+    <Property Name="CountryAverageSalaryUSD" Type="int" />
+    <Property Name="StateID" Type="varchar" MaxLength="3" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" />
+    <Property Name="CareerGroupID" Type="varchar" MaxLength="3" />
+    <Property Name="CareerGroupName" Type="varchar" MaxLength="100" />
+    <Property Name="CareerID" Type="varchar" MaxLength="4" />
+    <Property Name="CareerName" Type="varchar" MaxLength="100" />
+    <Property Name="GenderID" Type="char" MaxLength="1" />
+    <Property Name="GenderName" Type="varchar" MaxLength="6" />
+    <Property Name="KindOfWorkID" Type="char" MaxLength="1" />
+    <Property Name="KindOfWorkName" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Function Name="Add_Update_PageContent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contentType" Type="varchar" Mode="In" />
+    <Parameter Name="contentID" Type="varchar" Mode="In" />
+    <Parameter Name="contentText" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ArticleIDForURL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="ArticleID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteComment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CommentID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Get_Payment_ForEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmailID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetAccurateDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="smalldatetime">
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="CareerGroup" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetAge_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetArticleID_ByLocationID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locationID" Type="varchar" Mode="In" />
+    <Parameter Name="articleType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCareer_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCareerGroup_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCareerGroups_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCareerGroupsForSelect_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCareers_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCareers_ForCareerGroupID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCities_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCities_ByCountryID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCities_ByStateID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCity_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetComment_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CommentID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetComments_ByUrlID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CommentForURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCountnries_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCountnriesForSelect_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCountries_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCountriesForSelect_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCountry_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCurrencies_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCurrency_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="currencyID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetEducation_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetEducation_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="educationID" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetExperience_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetExperience_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="experienceID" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetGender_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="genderID" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetGroupedSalaries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="groupBy" Type="varchar" Mode="In" />
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+    <Parameter Name="levelID" Type="varchar" Mode="In" />
+    <Parameter Name="genderID" Type="varchar" Mode="In" />
+    <Parameter Name="eduID" Type="varchar" Mode="In" />
+    <Parameter Name="experienceID" Type="varchar" Mode="In" />
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="kindOfWork" Type="char" Mode="In" />
+    <Parameter Name="startWith" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetInternalLinks_ByFromID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromID" Type="varchar" Mode="In" />
+    <Parameter Name="fromView" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetKindOfWork_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="kindofworkID" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetPageContent_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contentID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetPageContent_ByParameters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locationID" Type="varchar" Mode="In" />
+    <Parameter Name="articleType" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetPageContent_ForID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pForID" Type="varchar" Mode="In" />
+    <Parameter Name="pAticleType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetProceed_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProceedID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetRange_ByUrlID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CountryID" Type="varchar" Mode="In" />
+    <Parameter Name="UrlID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetSalariesByCareerAndLocation_Count" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+    <Parameter Name="levelID" Type="varchar" Mode="In" />
+    <Parameter Name="genderID" Type="varchar" Mode="In" />
+    <Parameter Name="eduID" Type="varchar" Mode="In" />
+    <Parameter Name="experienceID" Type="varchar" Mode="In" />
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="kindOfWork" Type="char" Mode="In" />
+    <Parameter Name="startWith" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetSalariesByCareerAndLocation_Count_AllThisMonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSalariesByCareerAndLocation_Count_AllThisWeek" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSalariesByCareerAndLocation_ForDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+    <Parameter Name="kindOfWork" Type="char" Mode="In" />
+    <Parameter Name="levelID" Type="varchar" Mode="In" />
+    <Parameter Name="genderID" Type="varchar" Mode="In" />
+    <Parameter Name="eduID" Type="varchar" Mode="In" />
+    <Parameter Name="experienceID" Type="varchar" Mode="In" />
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="startRowIndex" Type="int" Mode="In" />
+    <Parameter Name="maxNumRows" Type="int" Mode="In" />
+    <Parameter Name="startWith" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetSalariesByCareerAndLocation_Paged" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+    <Parameter Name="kindOfWork" Type="char" Mode="In" />
+    <Parameter Name="levelID" Type="varchar" Mode="In" />
+    <Parameter Name="genderID" Type="varchar" Mode="In" />
+    <Parameter Name="eduID" Type="varchar" Mode="In" />
+    <Parameter Name="experienceID" Type="varchar" Mode="In" />
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="startRowIndex" Type="int" Mode="In" />
+    <Parameter Name="maxNumRows" Type="int" Mode="In" />
+    <Parameter Name="startWith" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetSalariesByCareerAndLocationForCheck_Paged" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+    <Parameter Name="isEUSurvey" Type="char" Mode="In" />
+    <Parameter Name="careerGroupID" Type="varchar" Mode="In" />
+    <Parameter Name="careerID" Type="varchar" Mode="In" />
+    <Parameter Name="kindOfWork" Type="char" Mode="In" />
+    <Parameter Name="levelID" Type="varchar" Mode="In" />
+    <Parameter Name="genderID" Type="varchar" Mode="In" />
+    <Parameter Name="eduID" Type="varchar" Mode="In" />
+    <Parameter Name="experienceID" Type="varchar" Mode="In" />
+    <Parameter Name="ageID" Type="varchar" Mode="In" />
+    <Parameter Name="year" Type="varchar" Mode="In" />
+    <Parameter Name="startRowIndex" Type="int" Mode="In" />
+    <Parameter Name="maxNumRows" Type="int" Mode="In" />
+    <Parameter Name="startWith" Type="char" Mode="In" />
+  </Function>
+  <Function Name="GetSalariesGroupedByCountriesAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSalaryDetailsByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetSalaryURL_BySourceID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pSourceID" Type="varchar" Mode="In" />
+    <Parameter Name="pKindOfView" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetSalaryURL_ByURLID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="URLID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetState_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stateID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetStates_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetStates_ByCityID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetStatesForCountryID_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countryID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetVisitor_ByVisitorIP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="visitorIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Insert_Payment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmailID" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="LatestPayment" Type="datetime" Mode="In" />
+    <Parameter Name="KindOfPayment" Type="char" Mode="In" />
+    <Parameter Name="VisitorIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Insert_Proceed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProceedID" Type="int" Mode="In" />
+    <Parameter Name="VisitorIP" Type="varchar" Mode="In" />
+    <Parameter Name="ProceedFromPage" Type="varchar" Mode="In" />
+    <Parameter Name="SalaryAddedAttempts" Type="varchar" Mode="In" />
+    <Parameter Name="ProceedErrors" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SalaryAdded" Type="char" Mode="In" />
+  </Function>
+  <Function Name="Insert_Salary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Country" Type="varchar" Mode="In" />
+    <Parameter Name="City" Type="varchar" Mode="In" />
+    <Parameter Name="CareerGroup" Type="varchar" Mode="In" />
+    <Parameter Name="Career" Type="varchar" Mode="In" />
+    <Parameter Name="CareerDescription" Type="varchar" Mode="In" />
+    <Parameter Name="GrossSalary" Type="int" Mode="In" />
+    <Parameter Name="NetSalary" Type="int" Mode="In" />
+    <Parameter Name="Experiences" Type="varchar" Mode="In" />
+    <Parameter Name="Education" Type="char" Mode="In" />
+    <Parameter Name="PermanentContract" Type="char" Mode="In" />
+    <Parameter Name="Gender" Type="char" Mode="In" />
+    <Parameter Name="Age" Type="int" Mode="In" />
+    <Parameter Name="VisitorIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Insert_Visitor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="visitorIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertArticle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="articleType" Type="varchar" Mode="In" />
+    <Parameter Name="articleCountryStateCity" Type="varchar" Mode="In" />
+    <Parameter Name="articleContent" Type="varchar(max)" Mode="In" />
+    <Parameter Name="country" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertComment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CommentForURL" Type="varchar" Mode="In" />
+    <Parameter Name="CommentText" Type="text" Mode="In" />
+    <Parameter Name="CommentDate" Type="datetime" Mode="In" />
+    <Parameter Name="AuthorName" Type="varchar" Mode="In" />
+    <Parameter Name="AuthorIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="IsCityInTheCountry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CityID" Type="varchar" Mode="In" />
+    <Parameter Name="CountryID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="IsSalaryForIPAdded_InLast24Months" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SalaryIDFormat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="TimeID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateArticle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="articleType" Type="varchar" Mode="In" />
+    <Parameter Name="articleCountryStateCity" Type="varchar" Mode="In" />
+    <Parameter Name="articleContent" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="UpdateCareer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="ImageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateCareerGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="ImageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateCity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="ImageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateComment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CommentID" Type="int" Mode="In" />
+    <Parameter Name="commentText" Type="text" Mode="In" />
+  </Function>
+  <Function Name="UpdateCountry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="ImageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateCurrencyEUR_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="currencyID" Type="varchar" Mode="In" />
+    <Parameter Name="currencyRatioToEUR" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateCurrencyUSD_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="currencyID" Type="varchar" Mode="In" />
+    <Parameter Name="currencyRatioToUSD" Type="float" Mode="In" />
+  </Function>
+  <Function Name="UpdateProceed_ByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProceedID" Type="int" Mode="In" />
+    <Parameter Name="VisitorIP" Type="varchar" Mode="In" />
+    <Parameter Name="ProceedFromPage" Type="varchar" Mode="In" />
+    <Parameter Name="SalaryAddedAttempts" Type="varchar" Mode="In" />
+    <Parameter Name="ProceedErrors" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SalaryAdded" Type="char" Mode="In" />
+  </Function>
+  <Function Name="UpdateState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="varchar" Mode="In" />
+    <Parameter Name="ImageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateVisitorAttempt_ByVisitorIP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="visitorIP" Type="varchar" Mode="In" />
+    <Parameter Name="currentAttempts" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Salaries_PRODModelStoreContainer">
+    <EntitySet Name="AGES" EntityType="Self.AGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ARTICLES" EntityType="Self.ARTICLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAREERGROUPS" EntityType="Self.CAREERGROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAREERS" EntityType="Self.CAREERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CITIES" EntityType="Self.CITIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMMENTS" EntityType="Self.COMMENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COUNTRIES" EntityType="Self.COUNTRIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCIES" EntityType="Self.CURRENCIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCIESUSD" EntityType="Self.CURRENCIESUSD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GENDER" EntityType="Self.GENDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KINDOFWORK" EntityType="Self.KINDOFWORK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAYMENTS" EntityType="Self.PAYMENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RANGEGROUPS" EntityType="Self.RANGEGROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESTRICTED" EntityType="Self.RESTRICTED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESTRICTEDBROWSERS" EntityType="Self.RESTRICTEDBROWSERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALARIES" EntityType="Self.SALARIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="URLS" EntityType="Self.URLS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXPERIENCES" EntityType="Self.EXPERIENCES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EXPERIENCES].[ExperienceID] AS [ExperienceID], 
+    [EXPERIENCES].[ExperienceName] AS [ExperienceName], 
+    [EXPERIENCES].[ExperienceImageURL] AS [ExperienceImageURL], 
+    [EXPERIENCES].[ExperienceNameForURL] AS [ExperienceNameForURL]
+    FROM [dbo].[EXPERIENCES] AS [EXPERIENCES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FEEDBACKS" EntityType="Self.FEEDBACKS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FEEDBACKS].[FeedbackID] AS [FeedbackID], 
+    [FEEDBACKS].[Comment] AS [Comment], 
+    [FEEDBACKS].[FeedbackDate] AS [FeedbackDate], 
+    [FEEDBACKS].[VisitorIP] AS [VisitorIP]
+    FROM [dbo].[FEEDBACKS] AS [FEEDBACKS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="INTERNALLINKS" EntityType="Self.INTERNALLINKS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [INTERNALLINKS].[LinkOrder] AS [LinkOrder], 
+    [INTERNALLINKS].[LinkFromType] AS [LinkFromType], 
+    [INTERNALLINKS].[LinkToType] AS [LinkToType], 
+    [INTERNALLINKS].[LinkFromID] AS [LinkFromID], 
+    [INTERNALLINKS].[LinkToID] AS [LinkToID]
+    FROM [dbo].[INTERNALLINKS] AS [INTERNALLINKS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PROCEEDS" EntityType="Self.PROCEEDS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PROCEEDS].[ProceedID] AS [ProceedID], 
+    [PROCEEDS].[VisitorIP] AS [VisitorIP], 
+    [PROCEEDS].[ProceedFromPage] AS [ProceedFromPage], 
+    [PROCEEDS].[SalaryAddedAttempts] AS [SalaryAddedAttempts], 
+    [PROCEEDS].[SalaryAdded] AS [SalaryAdded], 
+    [PROCEEDS].[ProceedErrors] AS [ProceedErrors], 
+    [PROCEEDS].[ProceedDate] AS [ProceedDate]
+    FROM [dbo].[PROCEEDS] AS [PROCEEDS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RANGES" EntityType="Self.RANGES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RANGES].[RangeGroupID] AS [RangeGroupID], 
+    [RANGES].[RangeID] AS [RangeID], 
+    [RANGES].[RangeFrom] AS [RangeFrom], 
+    [RANGES].[RangeTo] AS [RangeTo], 
+    [RANGES].[RangeAverage] AS [RangeAverage], 
+    [RANGES].[Percentage] AS [Percentage]
+    FROM [dbo].[RANGES] AS [RANGES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SALARYANSWERS" EntityType="Self.SALARYANSWERS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SALARYANSWERS].[QuestionID] AS [QuestionID], 
+    [SALARYANSWERS].[AnswerID] AS [AnswerID], 
+    [SALARYANSWERS].[Answer] AS [Answer], 
+    [SALARYANSWERS].[DatePosted] AS [DatePosted], 
+    [SALARYANSWERS].[DateUpdated] AS [DateUpdated], 
+    [SALARYANSWERS].[UserID] AS [UserID], 
+    [SALARYANSWERS].[VisitorIP] AS [VisitorIP], 
+    [SALARYANSWERS].[IsBrowser] AS [IsBrowser], 
+    [SALARYANSWERS].[IsMobile] AS [IsMobile], 
+    [SALARYANSWERS].[BrowserVersion] AS [BrowserVersion], 
+    [SALARYANSWERS].[BrowserSettings] AS [BrowserSettings]
+    FROM [dbo].[SALARYANSWERS] AS [SALARYANSWERS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SALARYLEVELS" EntityType="Self.SALARYLEVELS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SALARYLEVELS].[ID] AS [ID], 
+    [SALARYLEVELS].[RangeID] AS [RangeID], 
+    [SALARYLEVELS].[RangeFrom] AS [RangeFrom], 
+    [SALARYLEVELS].[RangeTo] AS [RangeTo], 
+    [SALARYLEVELS].[RangeText] AS [RangeText], 
+    [SALARYLEVELS].[CurrencyID] AS [CurrencyID], 
+    [SALARYLEVELS].[Scale] AS [Scale]
+    FROM [dbo].[SALARYLEVELS] AS [SALARYLEVELS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SALARYQUESTIONS" EntityType="Self.SALARYQUESTIONS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SALARYQUESTIONS].[QuestionID] AS [QuestionID], 
+    [SALARYQUESTIONS].[QuestionSubject] AS [QuestionSubject], 
+    [SALARYQUESTIONS].[Question] AS [Question], 
+    [SALARYQUESTIONS].[DateStarted] AS [DateStarted], 
+    [SALARYQUESTIONS].[UserStarted] AS [UserStarted], 
+    [SALARYQUESTIONS].[DateLastAnswer] AS [DateLastAnswer], 
+    [SALARYQUESTIONS].[AnswersCount] AS [AnswersCount], 
+    [SALARYQUESTIONS].[ViewsCount] AS [ViewsCount], 
+    [SALARYQUESTIONS].[UserLastPost] AS [UserLastPost], 
+    [SALARYQUESTIONS].[VisitorIP] AS [VisitorIP], 
+    [SALARYQUESTIONS].[IsBrowser] AS [IsBrowser], 
+    [SALARYQUESTIONS].[IsMobile] AS [IsMobile], 
+    [SALARYQUESTIONS].[BrowserVersion] AS [BrowserVersion], 
+    [SALARYQUESTIONS].[BrowserSettings] AS [BrowserSettings]
+    FROM [dbo].[SALARYQUESTIONS] AS [SALARYQUESTIONS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STATES" EntityType="Self.STATES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [STATES].[StateID] AS [StateID], 
+    [STATES].[CountryID] AS [CountryID], 
+    [STATES].[StateName] AS [StateName], 
+    [STATES].[AverageSalaryUSD] AS [AverageSalaryUSD], 
+    [STATES].[StateURL] AS [StateURL], 
+    [STATES].[StateImageURL] AS [StateImageURL], 
+    [STATES].[ContentID] AS [ContentID], 
+    [STATES].[StateNameForURL] AS [StateNameForURL]
+    FROM [dbo].[STATES] AS [STATES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VISITORS" EntityType="Self.VISITORS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VISITORS].[VisitorsCount] AS [VisitorsCount]
+    FROM [dbo].[VISITORS] AS [VISITORS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="viewSalaries" EntityType="Self.viewSalaries" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewSalaries].[ID] AS [ID], 
+    [viewSalaries].[DateUpdated] AS [DateUpdated], 
+    [viewSalaries].[GrossSalary] AS [GrossSalary], 
+    [viewSalaries].[GrossSalaryUSD] AS [GrossSalaryUSD], 
+    [viewSalaries].[PermanentContract] AS [PermanentContract], 
+    [viewSalaries].[CareerDescription] AS [CareerDescription], 
+    [viewSalaries].[IsSalaryChecked] AS [IsSalaryChecked], 
+    [viewSalaries].[Gender] AS [Gender], 
+    [viewSalaries].[Age] AS [Age], 
+    [viewSalaries].[AgeID] AS [AgeID], 
+    [viewSalaries].[Education] AS [Education], 
+    [viewSalaries].[Experiences] AS [Experiences], 
+    [viewSalaries].[SalaryLevel] AS [SalaryLevel], 
+    [viewSalaries].[SalaryLevelEUR] AS [SalaryLevelEUR], 
+    [viewSalaries].[SalaryLevelUSD] AS [SalaryLevelUSD], 
+    [viewSalaries].[CareerGroupID] AS [CareerGroupID], 
+    [viewSalaries].[CareerID] AS [CareerID], 
+    [viewSalaries].[CareerName] AS [CareerName], 
+    [viewSalaries].[EducationID] AS [EducationID], 
+    [viewSalaries].[EducationName] AS [EducationName], 
+    [viewSalaries].[ExperienceID] AS [ExperienceID], 
+    [viewSalaries].[ExperienceName] AS [ExperienceName], 
+    [viewSalaries].[CountryID] AS [CountryID], 
+    [viewSalaries].[CountryName] AS [CountryName], 
+    [viewSalaries].[IsEU] AS [IsEU], 
+    [viewSalaries].[CurrencyID] AS [CurrencyID], 
+    [viewSalaries].[CityID] AS [CityID], 
+    [viewSalaries].[CityName] AS [CityName], 
+    [viewSalaries].[StateID] AS [StateID]
+    FROM [dbo].[viewSalaries] AS [viewSalaries]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="viewSalaries_ALL" EntityType="Self.viewSalaries_ALL" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewSalaries_ALL].[ID] AS [ID], 
+    [viewSalaries_ALL].[SalaryID] AS [SalaryID], 
+    [viewSalaries_ALL].[DateUpdated] AS [DateUpdated], 
+    [viewSalaries_ALL].[GrossSalary] AS [GrossSalary], 
+    [viewSalaries_ALL].[NetSalary] AS [NetSalary], 
+    [viewSalaries_ALL].[GrossSalaryUSD] AS [GrossSalaryUSD], 
+    [viewSalaries_ALL].[NetSalaryUSD] AS [NetSalaryUSD], 
+    [viewSalaries_ALL].[SalaryEntries] AS [SalaryEntries], 
+    [viewSalaries_ALL].[CareerDescription] AS [CareerDescription], 
+    [viewSalaries_ALL].[Age] AS [Age], 
+    [viewSalaries_ALL].[YearsAtCurrentEmployeer] AS [YearsAtCurrentEmployeer], 
+    [viewSalaries_ALL].[NumberOfAllCompanies] AS [NumberOfAllCompanies], 
+    [viewSalaries_ALL].[HoursOfEducation] AS [HoursOfEducation], 
+    [viewSalaries_ALL].[WorkSatisfaction] AS [WorkSatisfaction], 
+    [viewSalaries_ALL].[CompanySatisfaction] AS [CompanySatisfaction], 
+    [viewSalaries_ALL].[SalarySatisfaction] AS [SalarySatisfaction], 
+    [viewSalaries_ALL].[CurrencyID] AS [CurrencyID], 
+    [viewSalaries_ALL].[CurrencyRatioToUSD] AS [CurrencyRatioToUSD], 
+    [viewSalaries_ALL].[EducationID] AS [EducationID], 
+    [viewSalaries_ALL].[EducationName] AS [EducationName], 
+    [viewSalaries_ALL].[ExperienceID] AS [ExperienceID], 
+    [viewSalaries_ALL].[ExperienceName] AS [ExperienceName], 
+    [viewSalaries_ALL].[CityID] AS [CityID], 
+    [viewSalaries_ALL].[CityName] AS [CityName], 
+    [viewSalaries_ALL].[CountryID] AS [CountryID], 
+    [viewSalaries_ALL].[CountryName] AS [CountryName], 
+    [viewSalaries_ALL].[IsEu] AS [IsEu], 
+    [viewSalaries_ALL].[ConvertToUSD] AS [ConvertToUSD], 
+    [viewSalaries_ALL].[CountryAverageSalaryUSD] AS [CountryAverageSalaryUSD], 
+    [viewSalaries_ALL].[StateID] AS [StateID], 
+    [viewSalaries_ALL].[StateName] AS [StateName], 
+    [viewSalaries_ALL].[CareerGroupID] AS [CareerGroupID], 
+    [viewSalaries_ALL].[CareerGroupName] AS [CareerGroupName], 
+    [viewSalaries_ALL].[CareerID] AS [CareerID], 
+    [viewSalaries_ALL].[CareerName] AS [CareerName], 
+    [viewSalaries_ALL].[GenderID] AS [GenderID], 
+    [viewSalaries_ALL].[GenderName] AS [GenderName], 
+    [viewSalaries_ALL].[KindOfWorkID] AS [KindOfWorkID], 
+    [viewSalaries_ALL].[KindOfWorkName] AS [KindOfWorkName]
+    FROM [dbo].[viewSalaries_ALL] AS [viewSalaries_ALL]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

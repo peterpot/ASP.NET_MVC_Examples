@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@using DAL.EF
+@model List<CAREER>
+
+@*<script src="~/Scripts/jQuery-test.js"></script>*@
+
+<script>    
+    SetUp();
+    Cars.openRoof();
+    
+    function SetUp() {
+        var s;
+        alert('TEST');
+        Cars = {
+            settings: {
+                type: 'Convertible',
+                fuel: 'Petrol',
+                equipment: {
+                    hp: '150',
+                    engine: '1.8t',
+                    model: 'Vector'
+                }
+            },
+            init: function () {
+                s = this.settings;
+                eq = s.equipment;
+                alert(s.type + ', ' + s.fuel + ' (' + eq.hp + 'HP, ' + eq.engine + ', ' + eq.model + ')');
+            },
+            openRoof: function () {
+                alert('Roof opened!, Windows Up: ' + this.windowsUp.isUp);
+            },
+            windowsUp:
+            {
+                isUp: 'Yes'
+            }
+        }
+        Cars.init();
+        Cars.openRoof();
+    };
+</script>
+
+@foreach(CAREER c in Model)
+{
+    @c.CareerName
+}
+
+

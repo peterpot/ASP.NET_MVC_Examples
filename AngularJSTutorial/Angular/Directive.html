@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/jquery-1.10.2.intellisense.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="ModulesJS/mainApp.js"></script>
+    <script src="ModulesJS/studentController.js"></script>    
+    <script type="text/template" id="tmpSubjects">
+        <p>Subjects:</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+            <tr ng-repeat="subject in student.subjects">
+                <td>{{ subject.name }}</td>
+                <td>{{ subject.marks }}</td>
+            </tr>
+        </table>
+    </script>
+</head>
+<body ng-app="mainApp">
+    <div id="templates"></div>
+    <script>
+        $(function () {
+            $('#templates').load("/Temps/Templates.html", function () {
+                // handle everything after you have your templates loaded...
+            });
+        });
+    </script>
+    <w3-test-directive></w3-test-directive>
+    <div w3-test-directive></div>
+    <!--<div class="w3-test-directive"></div>-->
+   
+
+    <peter-temp></peter-temp>
+    <div peter-temp></div>
+    <!--<div class="peter-temp"></div>-->
+
+    <!--<include-temp ng-controller="studentController"></include-temp>-->
+    <div ng-controller="studentController" ng-include="Include/Subject.html"></div>
+    <tmp-subjects ng-controller="studentController"></tmp-subjects>
+    <script>
+        // var app = angular.module("myApp", []);
+        mainApp.directive("w3TestDirective", function () {
+            return {
+                template : "<h1>Made by a directive!</h1>"
+            };
+        });
+
+        mainApp.directive("peterTemp", function () {
+            return {
+                template: "<h1>Peter directive!</h1>"
+            };
+        });
+
+        mainApp.directive("includeTemp", function () {
+            return {
+                template: "<div ng-include='Include/Subject.html'></div>"
+            };
+        });
+
+        mainApp.directive("tmpSubjects", function () {
+            return {
+                template: function()
+                {
+                    return angular.element(document.querySelector("#tmpSubjects")).html();
+                }
+            };
+        });
+
+        mainApp.directive("tmpSubjectsLink", function () {
+            return {
+                template: function () {
+                    return angular.element(document.querySelector("#tmpSubjects")).html();
+                }
+            };
+        });
+    </script>
+</body>
+</html>

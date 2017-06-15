@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html >
+    <head>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="../Scripts/bootstrap.min.js"></script>
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope, $http) {
+                $scope.Cars = [{ Name: "Porsche", Model: "911", isClasic: false },
+                               { Name: "Porsche", Model: "944", isClasic: true },
+                               { Name: "BMW", Model: "4 Cabriolet", isClasic : false  },
+                               { Name: "Audi", Model: "A5 Cabriolet", isClasic: false }];
+
+                $scope.AddNewCar = function (item)
+                {
+                    if (angular.isDefined(item) && item.Name != ""
+                          && item.Model != "") {
+                        $scope.Cars.push({
+                            Name: item.Name,
+                            Model: item.Model,
+                            isClasic: item.isClasic
+                        });
+
+                       
+                        item.Name = "";
+                        item.Model = "";
+                        item.isClasic = false;
+                    }
+                }
+
+                $scope = function FilterIsClasic(isClasic) {
+                    return isClasic == true;
+                }
+
+                $scope.DeleteCar = function (index)
+                {
+                    if (confirm("Deleter item?"))
+                    {
+                        $scope.Cars.splice(index, 1);
+                    }
+                }
+
+                $scope.Save = function()
+                {
+                    alert(JSON.stringify($scope.Cars));
+                    $http.post(
+                        // '/Home/SaveCars',
+                        '/api/Cars',
+                        JSON.stringify($scope.Cars),
+                        {
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    ).success(function (data) {
+                        alert("Saved!");
+                    });
+
+                    $http.get(
+                        // '/Home/SaveCars',
+                        '/api/Cars',
+                        {
+                            params: { Name: "Porsche", Model: "911", isClasic: false },
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    ).success(function (data) {
+                        alert(JSON.stringify(data));
+                        $scope.Cars = data;
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <h3 class="panel-header">
+                ALL CARS:
+                <span class="label label-info">
+                    NEW GEN. ({{ (Cars | filter: {isClasic: 'false'}).length}})
+                </span>
+                &nbsp;
+                <span class="label label-info">
+                    CLASIC ({{ (Cars | filter: {isClasic: 'true'}).length}})
+                </span>
+            </h3>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="well">
+                        <div class="form-group row">
+                            <label for="txtName">Name:</label>
+                            <input id="txtName" class="form-control"
+                                   ng-model="newItem.Name">
+                        </div>
+                        <div class="form-group row">
+                            <label for="txtModel">Model:</label>
+                            <input id="txtModel" class="form-control"
+                                   ng-model="newItem.Model">
+                        </div>
+                        <div class="form-group row">
+                            <label for="cbClasic">Clasic:</label>
+                            <input type="checkbox" id="cbClasic" class="form-control"
+                                   ng-model="newItem.isClasic">
+                        </div>
+                        <button class="btn btn-primary btn-block"
+                                ng-click="AddNewCar(newItem)">
+                            ADD CAR
+                        </button>
+                    </div>
+                    <h2>USING FORM</h2>
+                    <form name="myForm"   ng-submit="AddNewCar(newFormItem)">
+                        <div class="well">
+                            <div class="form-group row">
+                                <label for="txtName">Name:</label>
+                                <input id="txtName" class="form-control"
+                                    required ng-model="newFormItem.Name">
+                            </div>
+                            <div class="form-group row">
+                                <label for="txtModel">Model:</label>
+                                <input id="txtModel" class="form-control"
+                                    required ng-model="newFormItem.Model">
+                            </div>
+                            <div class="form-group row">
+                                <label for="cbClasic">Clasic:</label>
+                                <input type="checkbox" id="cbClasic" class="form-control"
+                                       ng-model="newFormItem.isClasic">
+                            </div>
+                            <button class="btn btn-primary btn-block"
+                                    type="submit" ng-disabled="myForm.$invalid">
+                                POST
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-xs-6">
+                    <table class="table">
+                        <thead>
+                            <tr><th>#</th><th>Name</th><th>Model</th></tr>
+                        </thead>
+                        <tr ng-repeat="item in Cars">
+                            <td>{{$index + 1}}</td>
+                            <td>{{item.Name}}</td>
+                            <td>{{item.Model}}</td>
+                            <td>
+                                <input type="checkbox" ng-model="item.isClasic">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary btn-block"
+                                        ng-click="DeleteCar($index)">
+                                    DELETE
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <button class="btn btn-primary btn-block"
+                        ng-click="Save()">
+                        Save
+                    </button>
+                </div>
+            </div>
+       </div>
+    </body>
+</html>
+
+

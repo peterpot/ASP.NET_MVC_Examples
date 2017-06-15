@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0653d2a5d54e49aeb6d7f56e9d6d5ab9" Name="Diagram1">
+        <EntityTypeShape EntityType="Salaries_PRODModel.AGE" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.ARTICLE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.CAREERGROUP" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.CAREER" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.CITy" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.COMMENT" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.COUNTRy" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.CURRENCy" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.CURRENCIESUSD" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.GENDER" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.KINDOFWORK" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.PAYMENT" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.RANGEGROUP" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.RESTRICTED" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.RESTRICTEDBROWSER" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.SALARy" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.URL" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.EXPERIENCE" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.FEEDBACK" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.INTERNALLINK" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.PROCEED" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.RANx" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.SALARYANSWER" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.SALARYLEVEL" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.SALARYQUESTION" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.STATE" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.VISITOR" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.viewSalary" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Salaries_PRODModel.viewSalaries_ALL" Width="1.5" PointX="10.75" PointY="14.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

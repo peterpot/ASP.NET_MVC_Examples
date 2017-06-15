@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="ModulesJS/mainApp.js"></script>
+    <script src="ModulesJS/countriesController.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="countriesController">
+        <table>
+           <tr>
+               <td>Country</td>
+           </tr>  
+            <tr ng-repeat="c in countries">
+                <td>{{ c.Id }}</td>
+                <td>{{ c.Name }}</td>
+            </tr>           
+        </table>
+    </div>
+</body>
+</html>

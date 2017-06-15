@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script src="Scripts/jquery-1.10.2.intellisense.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+<div>
+    <script>
+        function DeleteItem()
+        {
+            $.ajax({
+                type: 'Delete',
+                url: '/api/test?id=12345',
+                success: function()
+                {
+                    alert("deleted");
+                }
+            });
+        }
+    </script>
+</div>
+
+<div id="deletedItem" style="background-color:orange;">
+    Deleted item
+    <button id="btn" class="btn btn-danger" onclick="DeleteItem()">Delete</button>
+</div>
+
+</body>
+</html>

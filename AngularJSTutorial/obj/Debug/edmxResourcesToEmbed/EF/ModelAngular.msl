@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Salaries_PRODModelStoreContainer" CdmEntityContainer="Salaries_PRODEntities">
+    <EntitySetMapping Name="COUNTRIES">
+      <EntityTypeMapping TypeName="Salaries_PRODModel.COUNTRy">
+        <MappingFragment StoreEntitySet="COUNTRIES">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CountryAverageSalary" ColumnName="CountryAverageSalary" />
+          <ScalarProperty Name="CountryAverageSalaryUSD" ColumnName="CountryAverageSalaryUSD" />
+          <ScalarProperty Name="CurrencyRatioToUSD" ColumnName="CurrencyRatioToUSD" />
+          <ScalarProperty Name="CountryScale" ColumnName="CountryScale" />
+          <ScalarProperty Name="ConvertToUSD" ColumnName="ConvertToUSD" />
+          <ScalarProperty Name="IsEU" ColumnName="IsEU" />
+          <ScalarProperty Name="CountryURL" ColumnName="CountryURL" />
+          <ScalarProperty Name="CountryImageURL" ColumnName="CountryImageURL" />
+          <ScalarProperty Name="ContentID" ColumnName="ContentID" />
+          <ScalarProperty Name="CountryNameForURL" ColumnName="CountryNameForURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
